@@ -4,7 +4,6 @@ import { lighten } from 'polished'
 import styles from '../styles'
 
 const Container = styled.div`
-  /* background-color: ${styles.color.darkgray}; */
   /* background: linear-gradient(${styles.color.darkgray}, ${lighten(.05, styles.color.darkgray)}); */
   /* background: linear-gradient(${lighten(.02, styles.color.darkgray)}, ${styles.color.darkgray}); */
   background-color: ${styles.color.darkgray};
@@ -15,13 +14,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media only screen and (min-width: ${styles.width.medium}) {
-    height: ${styles.height.header};
-    min-height: 140px;
-  }
+  height: ${styles.height.header};
 
   @media only screen and (max-width: ${styles.width.medium}) {
+    height: 17rem;
     margin-bottom: 0;
   }
 `
@@ -30,7 +26,7 @@ const Contents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px 0;
+  margin: 1rem 0;
 `
 
 const Title = styled.h1`

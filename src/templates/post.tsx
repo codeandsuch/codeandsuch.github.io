@@ -58,7 +58,7 @@ const Subtext = styled.div`
   font-size: 1.6em;
 `
 
-const SubtextDot = styled.div`
+const SubtextDot = styled.span`
   margin: 0 12px;
 `
 

@@ -31,7 +31,7 @@ const Subtext = styled.h4`
   display: flex;
 `
 
-const SubtextDot = styled.div`
+const SubtextDot = styled.span`
   margin: 0 12px;
 `
 

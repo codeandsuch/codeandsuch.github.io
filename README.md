@@ -2,9 +2,10 @@
 
 ## Todo
 - [X] Cleanup
+- [X] Inline pre
+- [X] Publish to github pages
 - [ ] Social links
-- [ ] Inline code with backticks
-- [ ] Write an article
+- [ ] Write an actual article
 
 ## License
 

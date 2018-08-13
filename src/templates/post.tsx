@@ -18,7 +18,7 @@ const Container = styled.div`
 const Header = styled.header`
   width: 100%;
   background-color: ${styles.color.darkgray};
-  /* clip-path: polygon(0 32px, 100% 0, 100% calc(100% - 32px), 0 100%); */
+  /* clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%, 4% 50%); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +188,7 @@ class BlogPost extends React.Component<Props> {
 
         <Content dangerouslySetInnerHTML={{ __html: html }} />
 
-        <Share title={title} link={`https://codestuff.github.io${path}`} />
+        {/* <Share title={title} link={`https://codestuff.github.io${path}`} /> */}
       </Container>
     )
   }

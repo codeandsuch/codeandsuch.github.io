@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import readingTime from 'reading-time'
 import Link from 'gatsby-link'
 
-import Share from '../components/Share'
 import styles from '../styles'
 import './prism.css'
 
@@ -24,7 +23,11 @@ const Header = styled.header`
   align-items: center;
   padding: 64px 0 56px;
   margin-bottom: 32px;
-  height: ${styles.height.header};
+  min-height: ${styles.height.header};
+
+  @media only screen and (max-width: ${styles.width.medium}) {
+    padding: 32px 0 28px;
+  }
 `
 
 const HeaderContents = styled.div`
@@ -43,17 +46,19 @@ const BackButton = styled.div`
 
 const Title = styled.h1`
   color: white;
-  font-size: 2.8em;
   font-weight: bold;
   margin-bottom: 8px;
+  font-size: 3.2em;
 
-  @media only screen and (min-width: ${styles.width.max}) {
-    font-size: 3.2em;
+  @media only screen and (max-width: ${styles.width.medium}) {
+    margin-bottom: 2rem;
+    font-size: 2.5em;
   }
 `
 
 const Subtext = styled.div`
   display: flex;
+  flex-wrap: wrap;
   color: white;
   font-size: 1.6em;
 `
@@ -84,7 +89,7 @@ const Content = styled.article`
   }
 
   p a {
-    color: ${styles.color.darkgray};
+    color: ${styles.color.purple};
     text-decoration: underline;
   }
 
@@ -157,7 +162,7 @@ class BlogPost extends React.Component<Props> {
       : null
 
     const {
-      frontmatter: { title, date, path },
+      frontmatter: { title, date, author },
       html,
       excerpt,
     } = this.props.data.markdownRemark
@@ -175,9 +180,11 @@ class BlogPost extends React.Component<Props> {
           <HeaderContents>
             <Title>{title}</Title>
             <Subtext>
-              <div>{date}</div>
+              {author}
               <SubtextDot>•</SubtextDot>
-              <div>{readTime.text}</div>
+              {date}
+              <SubtextDot>•</SubtextDot>
+              {readTime.text}
             </Subtext>
           </HeaderContents>
         </Header>
@@ -210,6 +217,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 320)
       frontmatter {
         title
+        author
         date(formatString: "Do MMMM YYYY")
         path
       }

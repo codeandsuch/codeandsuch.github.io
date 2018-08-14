@@ -14,6 +14,7 @@ type Post = {
   frontmatter: {
     title: string
     path: string
+    author: string
     date: string
   }
   excerpt: string

@@ -23,15 +23,20 @@ const PostLink = styled(Link)`
 const Title = styled.h3`
   font-size: 2.8rem;
   line-height: 4rem;
+
+  @media only screen and (max-width: ${styles.width.medium}) {
+    font-size: 2.5em;
+  }
 `
 
 const Subtext = styled.h4`
   font-size: 1.4rem;
   line-height: 4rem;
   display: flex;
+  flex-wrap: wrap;
 `
 
-const SubtextDot = styled.span`
+const SubtextDot = styled.div`
   margin: 0 12px;
 `
 
@@ -47,7 +52,7 @@ interface Props {
 const Posts: React.SFC<Props> = ({ posts }) => (
   <div>
     {posts.map(post => {
-      const { title, path, date } = post.node.frontmatter
+      const { title, path, author, date } = post.node.frontmatter
 
       const textWithoutHTML = post.node.html.replace(/<[^>]*>/g, '')
       const readTime = readingTime(textWithoutHTML)
@@ -57,6 +62,8 @@ const Posts: React.SFC<Props> = ({ posts }) => (
           <PostLink to={path}>
             <Title>{title}</Title>
             <Subtext>
+              {author}
+              <SubtextDot>•</SubtextDot>
               {date}
               <SubtextDot>•</SubtextDot>
               {readTime.text}

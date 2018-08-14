@@ -14,10 +14,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${styles.height.header};
+  min-height: ${styles.height.header};
 
   @media only screen and (max-width: ${styles.width.medium}) {
-    height: 17rem;
+    min-height: 17rem;
     margin-bottom: 0;
   }
 `

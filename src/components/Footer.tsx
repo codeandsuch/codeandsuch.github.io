@@ -11,7 +11,6 @@ const Text = styled.footer`
 
   @media only screen and (max-width: ${styles.width.medium}) {
     font-size: 1.2em;
-    margin: 2rem 0;
   }
 `
 

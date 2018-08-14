@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-016ced2afe1ce7c15be3.js",
-      "component---src-layouts-index-tsx-016ced2afe1ce7c15be3.js.map"
+      "component---src-layouts-index-tsx-f9d52aad1fa6d44752ae.js",
+      "component---src-layouts-index-tsx-f9d52aad1fa6d44752ae.js.map"
     ],
     "component---src-templates-post-tsx": [
-      "component---src-templates-post-tsx-79b246559b007c8a52c7.js",
-      "component---src-templates-post-tsx-79b246559b007c8a52c7.js.map"
+      "component---src-templates-post-tsx-6f511bfcd1a0d6eb8553.js",
+      "component---src-templates-post-tsx-6f511bfcd1a0d6eb8553.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -16,17 +16,13 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
-    "path---embedded-youtube": [
-      "path---embedded-youtube-02b7a0d090ec5be12bba.js",
-      "path---embedded-youtube-02b7a0d090ec5be12bba.js.map"
+    "path---webpack-aliases-typescript": [
+      "path---webpack-aliases-typescript-5714ac9e23ffe5746a1f.js",
+      "path---webpack-aliases-typescript-5714ac9e23ffe5746a1f.js.map"
     ],
     "path---index": [
-      "path---index-7f932a0ecc7fc30c63e9.js",
-      "path---index-7f932a0ecc7fc30c63e9.js.map"
-    ],
-    "path---hello-world": [
-      "path---hello-world-1df00cebe8486216e551.js",
-      "path---hello-world-1df00cebe8486216e551.js.map"
+      "path---index-af271abc9b3044d7be77.js",
+      "path---index-af271abc9b3044d7be77.js.map"
     ],
     "commons": [
       "commons-c9acf4e3787ec326228c.js",
@@ -47,13 +43,13 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-tsx": [
-      "component---src-pages-index-tsx-d3c5cb0d7ce6aac5ba56.js",
-      "component---src-pages-index-tsx-d3c5cb0d7ce6aac5ba56.js.map"
+      "component---src-pages-index-tsx-7965f0ada7884d4d0f07.js",
+      "component---src-pages-index-tsx-7965f0ada7884d4d0f07.js.map"
     ],
     "app": [
-      "app-3dde0477e7590440e6c9.js",
+      "app-212a72d5d26e346b307e.js",
       "build-js-styles.css",
-      "app-3dde0477e7590440e6c9.js.map",
+      "app-212a72d5d26e346b307e.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [

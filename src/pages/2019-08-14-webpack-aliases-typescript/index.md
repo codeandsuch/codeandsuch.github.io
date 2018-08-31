@@ -1,5 +1,5 @@
 ---
-title: "Using Webpack aliases with Typescript and Jest"
+title: "Using Webpack aliases with Typescript (and Jest)"
 author: "Kalle Bornemark"
 date: "2018-08-14"
 path: "/webpack-aliases-typescript"

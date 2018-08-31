@@ -14,7 +14,7 @@ const styles = {
     grey: '#333333',
     lightgrey: '#bdbdbd',
     hover: '#ececec',
-    purple: '#937aa4',
+    purple: '#83728e',
   },
 };
 

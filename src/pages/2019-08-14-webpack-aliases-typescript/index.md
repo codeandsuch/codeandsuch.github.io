@@ -21,7 +21,7 @@ This not only requires one to figure out what the path should be, but is also ve
 
 To solve this, Webpack provides users with [resolve.alias](https://webpack.js.org/configuration/resolve/#resolve-alias) which allows for concise and consistent file imports. Aliases are added to the `alias` object nested inside `resolve`.
 
-Assuimg our `components` folder live inside a root-level `src` folder, we can create a `Components` alias like so:
+Assuming our `components` folder live inside a root-level `src` folder, we can create a `Components` alias like so:
 
 #### 📄 webpack.config.js
 ```js
@@ -45,7 +45,7 @@ import Foo from 'Components/Foo'
 
 ## With Typescript
 
-This is all great, but in order to make this work Typescript, a little more needs to be done. At the moment, Typescript doesn't know about the alias we created and will produce an error when it's referenced. To fix this, add the alias to `tsconfig.json`, like so:
+This is all great, but in order to make this work Typescript, a final step is required. At the moment, Typescript doesn't know about our alias and will thus produce an error when it's referenced. To fix this, add the alias to `tsconfig.json`.
 
 #### 📄 tsconfig.json
 
@@ -64,7 +64,7 @@ This is all great, but in order to make this work Typescript, a little more need
 
 Using aliases for commonly accessed paths creates a good workflow to build you app with, and you probably want to keep using these aliases when writing tests. So far, we've added the `components` alias to `webpack.config.js` and `tsconfig.json`, but since the Typescript inside our Jest tests isn't part of the same transpilation step as the rest of our codebase, the alias also needs to be added to our Jest configuration.
 
-Unless configured otherwise, Jest is configured inside `package.json`. To make Jest aware of our `components` alias, add it to `moduleNameMapper`, like so:
+Unless configured otherwise, Jest is configured inside `package.json`. To make Jest aware of our `components` alias, add it to `moduleNameMapper`.
 
 #### 📄 package.json
 ```json

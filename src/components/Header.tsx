@@ -36,16 +36,17 @@ const Title = styled.h1`
   text-transform: lowercase;
 `
 
-const Subtext = styled.h4`
-  font-size: 1.6rem;
-  line-height: 4rem;
-  display: flex;
-`
-
 const Highlight = styled.span`
   color: ${styles.color.purple};
   font-size: .9em;
-  margin: 0 1rem;
+  margin: 0 .8rem;
+`
+
+const Subtext = styled.h4`
+  font-size: 1.45rem;
+  line-height: 3rem;
+  display: flex;
+  letter-spacing: 1px;
 `
 
 const Header: React.SFC<{}> = () => (

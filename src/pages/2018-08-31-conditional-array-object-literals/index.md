@@ -17,7 +17,7 @@ const picnicBasket = [
 ];
 ```
 
-However, sometimes it's desirable to populate the array conditionally depending on the value of some variable. Perhaps you've attempted to accomplish this with a ternary operator:
+However, it's sometimes desirable to populate the array conditionally based on the value of some variable. Perhaps you've attempted to accomplish this in the past with a ternary operator:
 
 ```js
 const picnicBasket = [
@@ -55,7 +55,7 @@ To solve this, we have two options.
 
 ### Using filter
 
-One rather clean and readable approach is to conditionally populate the array using the `&&` operator, and then removing its falsy values by chaining on a `filter` call.
+One rather clean and readable approach is to populate the array using the `&&` operator, and then remove its falsy values by chaining on a `filter` call.
 
 ```js
 const picnicBasket = [
@@ -89,7 +89,7 @@ console.log(picnicBasket)
 
 ### What about object literals?
 
-While the above approach can look a bit messy at first, it has the benefit of working with both array and object literals.
+While the above approach can look a bit messy at first, it has the benefit of not only working with array literals, but with object literals too. In the example below, the property `c` with the value `3` will only be added if `someCondition` is true.
 
 ```js
 let obj = {
@@ -103,4 +103,4 @@ console.log(obj)
 // someCondition === false  ->  Object {a: 1, b: 2}
 ```
 
-Neat!
+And that's pretty neat!

@@ -9,7 +9,7 @@ This small tutorial will show you how to set up [Webpack](https://webpack.js.org
 
 ## The problem
 
-Importing files using relative paths works well in small projects, but it can become cumbersome rather quickly once the project starts growing. Many of us have found ourselves writing something like this:
+Importing files with relative paths is fine in small projects, but once the project starts growing it can become a burden. Many of us have found ourselves writing something like this in the past:
 
 ```js
 import Foo from '../../../../components/Foo'
@@ -19,7 +19,7 @@ This not only requires one to figure out what the path should be, but is also ve
 
 ## Webpack to the rescue!
 
-To solve this, Webpack provides users with [resolve.alias](https://webpack.js.org/configuration/resolve/#resolve-alias) which allows for concise and consistent file imports. Aliases are added to the `alias` object nested inside `resolve`.
+To solve this, Webpack provides users with [resolve.alias](https://webpack.js.org/configuration/resolve/#resolve-alias) which allows for concise and consistent file imports.
 
 Assuming our `components` folder live inside a root-level `src` folder, we can create a `Components` alias like so:
 
@@ -45,7 +45,7 @@ import Foo from 'Components/Foo'
 
 ## With Typescript
 
-This is all great, but in order to make this work Typescript, a final step is required. At the moment, Typescript doesn't know about our alias and will thus produce an error when it's referenced. To fix this, add the alias to `tsconfig.json`.
+This is all great, but in order to make this work with Typescript, a final step is required. At the moment, our alias isn't known by Typescript and will thus produce an error when referenced. To fix this, add the alias to `tsconfig.json`.
 
 #### 📄 tsconfig.json
 
@@ -62,9 +62,9 @@ This is all great, but in order to make this work Typescript, a final step is re
 
 ## With Jest
 
-Using aliases for commonly accessed paths creates a good workflow to build you app with, and you probably want to keep using these aliases when writing tests. So far, we've added the `components` alias to `webpack.config.js` and `tsconfig.json`, but since the Typescript inside our Jest tests isn't part of the same transpilation step as the rest of our codebase, the alias also needs to be added to our Jest configuration.
+Using aliases for commonly accessed paths creates a good workflow to build your app with, and you probably want to keep using these aliases when writing tests. So far, we've added the `components` alias to `webpack.config.js` and `tsconfig.json`, but since the Typescript inside our Jest tests isn't part of the same transpilation step as the rest of our codebase, the alias also needs to be added to our Jest configuration.
 
-Unless configured otherwise, Jest is configured inside `package.json`. To make Jest aware of our `components` alias, add it to `moduleNameMapper`.
+Unless specified otherwise, Jest is configured inside `package.json`. To make Jest aware of our `components` alias, add it to `moduleNameMapper`.
 
 #### 📄 package.json
 ```json
@@ -82,5 +82,3 @@ Unless configured otherwise, Jest is configured inside `package.json`. To make J
 Note: This assumes that you've already set up Jest correctly in your React/Typescript project.
 
 That's it! 🎉 Our Webpack alias should now also work inside Jest tests.
-
-<!-- `youtube:https://www.youtube.com/embed/u21W_tfPVrY` -->

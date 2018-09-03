@@ -33,7 +33,7 @@ const Title = styled.h1`
   font-size: 4.5rem;
   line-height: 4.5rem;
   text-align: center;
-  text-transform: lowercase;
+  letter-spacing: 1px;
 `
 
 const Highlight = styled.span`
@@ -52,9 +52,9 @@ const Subtext = styled.h4`
 const Header: React.SFC<{}> = () => (
   <Container>
     <Contents>
-      <Title>Code<Highlight>🙴</Highlight>Stuff</Title>
+      <Title>code<Highlight>🙴</Highlight>such</Title>
       <Subtext>
-        A blog about code... and stuff
+        A blog about code, and such.
       </Subtext>
     </Contents>
   </Container>

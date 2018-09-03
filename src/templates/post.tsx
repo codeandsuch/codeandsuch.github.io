@@ -194,8 +194,6 @@ class BlogPost extends React.Component<Props> {
         </BackButton>
 
         <Content dangerouslySetInnerHTML={{ __html: html }} />
-
-        {/* <Share title={title} link={`https://codestuff.github.io${path}`} /> */}
       </Container>
     )
   }

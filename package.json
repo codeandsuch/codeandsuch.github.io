@@ -1,9 +1,9 @@
 {
-  "name": "codestuff",
-  "description": "A blog about code stuff",
+  "name": "codeandsuch",
+  "description": "A blog about code, and such.",
   "version": "1.0.0",
   "author": "Kalle Bornemark <kalle.bornemark@gmail.com>",
-  "homepage": "http://kallebornemark.github.io/codestuff",
+  "homepage": "http://codeandsuch.github.io/",
   "keywords": [
     "gatsby"
   ],

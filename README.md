@@ -12,7 +12,9 @@ gatsby develop
 - [X] Inline pre
 - [X] Publish to github pages
 - [X] Write an actual article
-- [ ] Move repo from personal account
+- [X] Move repo from personal account
+- [ ] Improve logo
+- [ ] Create favicon
 - [ ] Social links
 
 ## License

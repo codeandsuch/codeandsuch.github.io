@@ -6,9 +6,9 @@ import readingTime from 'reading-time'
 import styles from '../styles'
 
 const Post = styled.div`
-  background-color: #f8f8f8;
+  background-color: ${styles.color.lightgrey};
   margin-bottom: 16px;
-  color: ${styles.color.grey};
+  color: ${styles.color.darkgrey};
 
   &:hover {
     background-color: ${styles.color.hover};

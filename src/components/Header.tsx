@@ -2,24 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { lighten } from 'polished'
 import styles from '../styles'
+import Link from 'gatsby-link'
 
-const Container = styled.div`
-  /* background: linear-gradient(${styles.color.darkgray}, ${lighten(.05, styles.color.darkgray)}); */
-  /* background: linear-gradient(${lighten(.02, styles.color.darkgray)}, ${styles.color.darkgray}); */
-  background-color: ${styles.color.darkgray};
+const Container = styled(Link)`
+  /* background: linear-gradient(${styles.color.darkblue}, ${lighten(.05, styles.color.darkblue)}); */
+  /* background: linear-gradient(${lighten(.02, styles.color.darkblue)}, ${styles.color.darkblue}); */
+  background-color: ${styles.color.darkblue};
   padding: 32px 16px;
   color: white;
-  margin-bottom: 32px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: ${styles.height.header};
-
-  @media only screen and (max-width: ${styles.width.medium}) {
-    min-height: 17rem;
-    margin-bottom: 0;
-  }
+  height: ${(p: Props) => p.compressed ? '12rem' : '20rem'};
+  cursor: pointer;
 `
 
 const Contents = styled.div`
@@ -30,29 +26,36 @@ const Contents = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 4.5rem;
-  line-height: 4.5rem;
+  font-size: 3.3rem;
+  line-height: 3rem;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 `
 
 const Highlight = styled.span`
   color: ${styles.color.purple};
   font-size: .9em;
-  margin: 0 .8rem;
+  margin: 0 .6rem 0 .5rem;
+  font-weight: normal;
 `
 
 const Subtext = styled.h4`
-  font-size: 1.45rem;
-  line-height: 3rem;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
   display: flex;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
+  color: ${styles.color.subtext};
+  font-weight: normal;
 `
 
-const Header: React.SFC<{}> = () => (
-  <Container>
+interface Props {
+  compressed?: boolean;
+}
+
+const Header: React.SFC<Props> = props => (
+  <Container { ...props } to='/'>
     <Contents>
-      <Title>code<Highlight>🙴</Highlight>such</Title>
+      <Title>code<Highlight>&</Highlight>such</Title>
       <Subtext>
         A blog about code, and such.
       </Subtext>

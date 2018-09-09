@@ -12,11 +12,13 @@ const Container = styled.main`
 `
 
 const Contents = styled.div`
+  margin-top: 2rem;
   padding: 0 16px;
   max-width: 1200px;
 
   @media only screen and (max-width: ${styles.width.medium}) {
     padding: 0;
+    margin-top: 0;
   }
 `
 

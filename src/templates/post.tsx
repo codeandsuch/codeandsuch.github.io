@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import readingTime from 'reading-time'
 import Link from 'gatsby-link'
 
+import Header from '../components/Header'
 import styles from '../styles'
 import './prism.css'
 
@@ -14,16 +15,16 @@ const Container = styled.div`
   min-width: 0;
 `
 
-const Header = styled.header`
+const PostHeader = styled.header`
   width: 100%;
-  background-color: ${styles.color.darkgray};
+  background-color: ${styles.color.lightgrey};
   /* clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%, 4% 50%); */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 64px 0 56px;
   margin-bottom: 32px;
-  min-height: ${styles.height.header};
+  min-height: 20rem;
 
   @media only screen and (max-width: ${styles.width.medium}) {
     padding: 32px 0 28px;
@@ -45,7 +46,7 @@ const BackButton = styled.div`
 `
 
 const Title = styled.h1`
-  color: white;
+  color: ${styles.color.darkblue};
   font-weight: bold;
   margin-bottom: 8px;
   font-size: 3.2em;
@@ -59,7 +60,7 @@ const Title = styled.h1`
 const Subtext = styled.div`
   display: flex;
   flex-wrap: wrap;
-  color: white;
+  color: ${styles.color.grey};
   font-size: 1.6em;
 `
 
@@ -71,7 +72,7 @@ const Content = styled.article`
   max-width: ${styles.width.contentMax};
   font-size: 1.6em;
   line-height: 1.8em;
-  color: ${styles.color.grey};
+  color: ${styles.color.darkgrey};
   padding: 0 16px;
   width: 100%;
 
@@ -88,9 +89,12 @@ const Content = styled.article`
     margin-left: 1.1em;
   }
 
-  p a {
-    color: ${styles.color.purple};
+  a {
+    color: ${styles.color.turquoise};
     text-decoration: underline;
+    :visited {
+      color: ${styles.color.turquoise};
+    }
   }
 
   img {
@@ -128,7 +132,7 @@ const Content = styled.article`
   }
 
   blockquote {
-    background-color: ${styles.color.darkgray};
+    background-color: ${styles.color.darkblue};
     padding-left: 8px;
     color: #757575;
     font-style: italic;
@@ -176,7 +180,9 @@ class BlogPost extends React.Component<Props> {
           <meta name="description" content={excerpt} />
         </Helmet>
 
-        <Header>
+        <Header compressed/>
+
+        <PostHeader>
           <HeaderContents>
             <Title>{title}</Title>
             <Subtext>
@@ -187,7 +193,7 @@ class BlogPost extends React.Component<Props> {
               {readTime.text}
             </Subtext>
           </HeaderContents>
-        </Header>
+        </PostHeader>
 
         <BackButton>
           <Link to='/'>←</Link>

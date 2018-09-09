@@ -54,7 +54,7 @@ class Template extends React.Component<Props> {
           {/* <link rel="icon" type="image/png" sizes="32x32" href={favicon32} /> */}
           {/* <link rel="icon" type="image/png" sizes="48x48" href={favicon48} /> */}
 
-          <meta name="theme-color" content={styles.color.darkgray} />
+          <meta name="theme-color" content={styles.color.darkblue} />
         </Helmet>
 
         {/* <Header /> */}

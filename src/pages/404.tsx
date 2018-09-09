@@ -17,7 +17,7 @@ const Error = styled.p`
   line-height: 7.2rem;
   margin-bottom: 16px;
   font-weight: bold;
-  color: ${styles.color.darkgray};
+  color: ${styles.color.darkblue};
   text-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
 
   @media only screen and (min-width: ${styles.width.max}) {
@@ -31,7 +31,7 @@ const Title = styled.h1`
   line-height: 3.2rem;
   margin-bottom: 32px;
   text-align: center;
-  color: ${styles.color.grey};
+  color: ${styles.color.darkgrey};
 
   @media only screen and (min-width: ${styles.width.max}) {
     font-size: 2.4rem;
@@ -43,7 +43,7 @@ const HomeButton = styled.div`
   font-size: 1.6rem;
   line-height: 1.6rem;
   padding: 16px;
-  background-color: ${styles.color.darkgray};
+  background-color: ${styles.color.darkblue};
   color: white;
   border-radius: 4px;
 `

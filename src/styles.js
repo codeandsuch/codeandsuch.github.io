@@ -5,16 +5,21 @@ const styles = {
     contentMax: '850px',
   },
 
-  height: {
-    header: '25vh',
-  },
-
   color: {
-    darkgray: '#2e303d',
-    grey: '#333333',
-    lightgrey: '#bdbdbd',
+    lightblue: '#f2f5fa',
+    blue: '#7272a3',
+    darkblue: '#170d33',
+
+    lightgrey: '#f8f8f8',
+    grey: '#8a8a8a',
+    darkgrey: '#333333',
+
+    purple: '#978b9e',
+    red: '#f05f40',
+    turquoise: '#3ea7bb',
+
     hover: '#ececec',
-    purple: '#83728e',
+    subtext: '#cfcdd4',
   },
 };
 

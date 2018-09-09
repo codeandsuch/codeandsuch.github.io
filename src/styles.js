@@ -8,7 +8,7 @@ const styles = {
   color: {
     lightblue: '#f2f5fa',
     blue: '#7272a3',
-    darkblue: '#170d33',
+    darkblue: '#292142',
 
     lightgrey: '#f8f8f8',
     grey: '#8a8a8a',

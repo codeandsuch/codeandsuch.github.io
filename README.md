@@ -13,9 +13,10 @@ gatsby develop
 - [X] Publish to github pages
 - [X] Write an actual article
 - [X] Move repo from personal account
-- [ ] Improve logo
+- [X] Improve logo
+- [ ] Google Analytics
 - [ ] Create favicon
-- [ ] Social links
+- [ ] Post footer w/ social links
 
 ## License
 

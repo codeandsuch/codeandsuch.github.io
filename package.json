@@ -17,14 +17,15 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "develop": "gatsby develop -H 0.0.0.0",
+    "develop": "gatsby develop -H localhost",
+    "start": "gatsby develop -H localhost",
     "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -b master -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   },
   "dependencies": {
     "@types/react-helmet": "^5.0.5",
-    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-styled-components": "^1.7.1",
     "gatsby": "^1.9.250",
     "gatsby-cli": "^1.1.50",
     "gatsby-link": "^1.6.8",
@@ -47,8 +48,10 @@
     "gatsby-transformer-remark": "^1.7.1",
     "gatsby-transformer-sharp": "^1.6.1",
     "polished": "^1.9.3",
+    "react": "^16.5.1",
+    "react-pose": "^3.3.0",
     "reading-time": "^1.1.0",
-    "styled-components": "^3.2.5"
+    "styled-components": "^3.4.6"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

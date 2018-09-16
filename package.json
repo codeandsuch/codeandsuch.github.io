@@ -37,6 +37,7 @@
     "gatsby-plugin-sharp": "^1.6.2",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-typescript": "^1.4.19",
+    "gatsby-remark-autolink-headers": "^1.4.19",
     "gatsby-remark-copy-linked-files": "^1.5.2",
     "gatsby-remark-embed-youtube": "^0.0.7",
     "gatsby-remark-external-links": "0.0.4",

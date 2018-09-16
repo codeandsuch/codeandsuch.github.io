@@ -15,8 +15,10 @@ gatsby develop
 - [X] Move repo from personal account
 - [X] Improve logo
 - [ ] Google Analytics
-- [ ] Create favicon
-- [ ] Post footer w/ social links
+- [ ] Favicon
+- [ ] Post footer
+- [ ] Pagination
+- [ ] Search
 
 ## License
 

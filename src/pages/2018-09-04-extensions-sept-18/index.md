@@ -1,7 +1,7 @@
 ---
 title: "My essential VS Code extensions as of September 2018"
 author: "Kalle Bornemark"
-date: "2018-09-09"
+date: "2018-09-23"
 path: "/extensions-sept-18"
 twitterHandle: "@kallebornemark"
 ---

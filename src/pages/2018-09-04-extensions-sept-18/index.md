@@ -14,9 +14,9 @@ Here's a list of my must-have VS Code extensions as of September 2018.
 
 This is the first extension I install when I set up VS Code on a new system. It lets you upload all relevant configuration data (extensions, keybinds, settings, snippets, etc) into a Gist on Github, making it dead simple to set up an identical configuration elsewhere. Once your settings are uploaded, simply run the `Sync: Download Settings` command on your new system and you're good to go.
 
-This extensions also makes it easy to keep the VS Code settings of two different systems "in sync". Perhaps you're frequently switching between your work computer and your personal computer at home, and you want to work in intentical environments regardless of which computer you use. Settings Sync lets you accomplish exactly this in a fairly straightforward way.
+This extensions also makes it easy to keep the VS Code settings of two different systems "in sync". Perhaps you're frequently switching between your work computer and your personal computer at home, and you want to work in identical environments regardless of which computer you use. Settings Sync lets you accomplish exactly this in a fairly straightforward way.
 
-💾 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) at VS Marketplate
+💾 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) at VS Marketplace
 
 
 ---
@@ -24,20 +24,20 @@ This extensions also makes it easy to keep the VS Code settings of two different
 
 # 🔧 Sensitive Replace
 
-Ever wanted to rename something without losing the individual casing in each occurance? Sensitive Replace allows one to do this in two simple steps:
+Ever wanted to rename something without losing the individual casing in each occurrence? Sensitive Replace allows one to do this in two simple steps:
 
 1. Select every instance of the word you want to change (this can be done with VS Code's built-in `Add Selection To Next Find Match` command, default keybind is `ctrl`+`D`).
 
-2. Open up the commands menu (`ctrl`+`shift`+`p`), run `Sensitive: Repalce selections`
+2. Open up the commands menu (`ctrl`+`shift`+`p`), run `Sensitive: Replace selections`
 and enter the word you want to change to.
 
 ![SensitiveReplace](SensitiveReplace.gif)
 
 Voilà!
 
-> Side note: `ctrl`+`D` behaves slightly differently depending on if you run it with or without a selected word. Without, the next exact occurance of whatever word your cursor is currently pointing at will be selected in a case sensitive manner. **With** a selected word, however, the match will be case-insensitive, which is what you would want in the scenario above.
+> Side note: `ctrl`+`D` behaves slightly differently depending on if you run it with or without a selected word. Without, the next exact occurrence of whatever word your cursor is currently pointing at will be selected in a case sensitive manner. **With** a selected word, however, the match will be case-insensitive, which is what you would want in the scenario above.
 
-💾 [Sensitive Replace](https://marketplace.visualstudio.com/items?itemName=vilicvane.sensitive-replace) at VS Marketplate
+💾 [Sensitive Replace](https://marketplace.visualstudio.com/items?itemName=vilicvane.sensitive-replace) at VS Marketplace
 
 
 ---
@@ -51,7 +51,7 @@ This little extension lets you jump up and down multiple lines at a time with `a
 
 ![line-jumper](line-jumper.gif)
 
-💾 [line-jumper](https://marketplace.visualstudio.com/items?itemName=alekseychaikovsky.line-jumper) at VS Marketplate
+💾 [line-jumper](https://marketplace.visualstudio.com/items?itemName=alekseychaikovsky.line-jumper) at VS Marketplace
 
 
 ---
@@ -63,7 +63,7 @@ This very simple extension automatically keeps pairs of HTML tags in sync as you
 
 ![Auto Rename Tag](AutoRenameTag.gif)
 
-💾 [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) at VS Marketplate
+💾 [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) at VS Marketplace
 
 
 ---
@@ -77,7 +77,7 @@ If you're like me, you'll agree that being able to do common tasks with commands
 
 ![File Utils](FileUtils.png)
 
-💾 [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils) at VS Marketplate
+💾 [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils) at VS Marketplace
 
 
 ---
@@ -91,7 +91,7 @@ This little extension transforms your selection of code into a snippet-ready JSO
 
 ![easy-snippet](easy-snippet.gif)
 
-💾 [easy-snippet](https://marketplace.visualstudio.com/items?itemName=inu1255.easy-snippet) at VS Marketplate
+💾 [easy-snippet](https://marketplace.visualstudio.com/items?itemName=inu1255.easy-snippet) at VS Marketplace
 
 
 ---
@@ -99,11 +99,11 @@ This little extension transforms your selection of code into a snippet-ready JSO
 
 # 🔧 TODO Highlight
 
-This little extension makes sure you don't leave a bunch of TODOs sprinkled throughout your code. It does this by highlighting every instance of "TODO:" in an noticable way. It's also very customizable, allowing you to change highlight color, case sensitivity, keyword, and more.
+This little extension makes sure you don't leave a bunch of TODOs sprinkled throughout your code. It does this by highlighting every instance of "TODO:" in an noticeable way. It's also very customizable, allowing you to change highlight color, case sensitivity, keyword, and more.
 
 ![TODOHighlight](TODOHighlight.png)
 
-💾 [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) at VS Marketplate
+💾 [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) at VS Marketplace
 
 
 ---
@@ -117,4 +117,4 @@ Dracula is also available for 50+ apps, including Visual Studio, Slack, React De
 
 > Side note: Dracula is the theme used in the above gifs and images.
 
-💾 [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) at VS Marketplate
+💾 [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) at VS Marketplace

@@ -84,6 +84,11 @@ const Content = styled.article`
     margin-top: 16px !important;
   }
 
+  hr {
+    border-top: none;
+    border-color: lightgray;
+  }
+
   ul,
   ol {
     margin-left: 1.1em;
@@ -98,7 +103,6 @@ const Content = styled.article`
   }
 
   img {
-    width: 100%;
     border-radius: 4px;
   }
 

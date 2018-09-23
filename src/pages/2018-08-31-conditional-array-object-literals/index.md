@@ -1,5 +1,5 @@
 ---
-title: "Conditionally adding entries to JS array and object literals"
+title: "Conditionally adding entries to array and object literals in Javascript"
 author: "Kalle Bornemark"
 date: "2018-08-31"
 path: "/conditional-array-object-literals"

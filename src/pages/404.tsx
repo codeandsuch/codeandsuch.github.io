@@ -20,7 +20,7 @@ const Error = styled.p`
   color: ${styles.color.darkblue};
   text-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
 
-  @media only screen and (min-width: ${styles.width.max}) {
+  @media only screen and (min-width: ${styles.width.max}px) {
     font-size: 12rem;
     line-height: 12.8rem;
   }
@@ -33,7 +33,7 @@ const Title = styled.h1`
   text-align: center;
   color: ${styles.color.darkgrey};
 
-  @media only screen and (min-width: ${styles.width.max}) {
+  @media only screen and (min-width: ${styles.width.max}px) {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }

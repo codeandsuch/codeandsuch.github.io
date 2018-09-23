@@ -7,14 +7,14 @@ import styles from '../styles'
 
 const Container = styled.div`
   width: 100%;
-  max-width: ${styles.width.contentMax};
+  max-width: ${styles.width.contentMax}px;
 `
 
 const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex;
+  justify-content: center;
   width: 100%;
   padding: 0 16px;
 `
@@ -23,10 +23,11 @@ const Divider = styled.div`
   user-select: none;
   width: 100%;
   font-size: 15px;
-  margin: 10rem 0 6rem 3rem;
+  margin: 10rem 0 6rem 0;
   line-height: 0px;
   letter-spacing: 20px;
   color: #c5c5c5;
+  text-align: center;
 `
 
 const ShareLink = styled.a`

@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import styles from '../styles'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link';
+import React from 'react';
+import styled from 'styled-components';
+
 import bg from '../assets/bg-blue-noise.png';
+import styles from '../styles';
 
 const Container = styled(Link)`
   /* background-color: ${styles.color.darkblue}; */
@@ -14,10 +15,10 @@ const Container = styled(Link)`
   justify-content: center;
   cursor: pointer;
   transition: height 1s ease;
-  height: ${(p: Props) => p.compressed ? '5rem' : '20rem'};
-  padding: ${(p: Props) => p.compressed ? 0 : '32px 16px'};
-  position: ${(p: Props) => p.compressed ? 'fixed' : 'normal'};
-  box-shadow: ${(p: Props) => p.compressed ? '0 3px 5px rgba(57, 63, 72, 0.15)' : 'none'};
+  height: ${(p: any) => p.to.state.compressed ? '5rem' : '20rem' };
+  padding: ${(p: any) => p.to.state.compressed ? 0 : '32px 16px'};
+  position: ${(p: any) => p.to.state.compressed ? 'fixed' : 'normal'};
+  box-shadow: ${(p: any) => p.to.state.compressed ? '0 3px 5px rgba(57, 63, 72, 0.15)' : 'none'};
 `
 
 const Contents = styled.div`
@@ -56,7 +57,12 @@ interface Props {
 }
 
 const Header: React.SFC<Props> = ({ compressed }) => (
-  <Container to='/' { ...{ compressed } }>
+  <Container
+    to={{
+      pathname: '/',
+      state: { compressed }
+    }}
+  >
     <Contents>
       <Title { ...{ compressed } }>code<Highlight>&</Highlight>such</Title>
       { !compressed &&

@@ -24,7 +24,7 @@ const Title = styled.h3`
   font-size: 2.8rem;
   line-height: 4rem;
 
-  @media only screen and (max-width: ${styles.width.medium}) {
+  @media only screen and (max-width: ${styles.width.medium}px) {
     font-size: 2.5em;
   }
 `

@@ -28,20 +28,20 @@ const PostHeader = styled.header`
   margin-bottom: 32px;
   min-height: 20rem;
 
-  @media only screen and (max-width: ${styles.width.medium}) {
+  @media only screen and (max-width: ${styles.width.medium}px) {
     padding: 32px 0 28px;
   }
 `
 
 const HeaderContents = styled.div`
-  max-width: ${styles.width.contentMax};
+  max-width: ${styles.width.contentMax}px;
   width: 100%;
   padding: 0 16px;
 `
 
 const BackButton = styled.div`
   width: 100%;
-  max-width: ${styles.width.contentMax};
+  max-width: ${styles.width.contentMax}px;
   font-size: 2em;
   padding: 0 16px;
   margin-bottom: 2rem;
@@ -53,7 +53,7 @@ const Title = styled.h1`
   margin-bottom: 8px;
   font-size: 3.2em;
 
-  @media only screen and (max-width: ${styles.width.medium}) {
+  @media only screen and (max-width: ${styles.width.medium}px) {
     margin-bottom: 2rem;
     font-size: 2.5em;
   }
@@ -71,7 +71,7 @@ const SubtextDot = styled.span`
 `
 
 const Content = styled.article`
-  max-width: ${styles.width.contentMax};
+  max-width: ${styles.width.contentMax}px;
   font-size: 1.6em;
   line-height: 1.8em;
   color: ${styles.color.darkgrey};
@@ -80,6 +80,12 @@ const Content = styled.article`
 
   & > *:not(:first-child) {
     margin-top: 32px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @media only screen and (max-width: ${styles.width.contentMax + 30}px) {
+      margin-left: 1rem;
+    }
   }
 
   h2 + *,  h3 + *, h4 + *, h5 + *, h6 + * {

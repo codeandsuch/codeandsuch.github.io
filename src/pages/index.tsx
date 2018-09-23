@@ -16,7 +16,7 @@ const Contents = styled.div`
   padding: 0 16px;
   max-width: 1200px;
 
-  @media only screen and (max-width: ${styles.width.medium}) {
+  @media only screen and (max-width: ${styles.width.medium}px) {
     padding: 0;
     margin-top: 0;
   }

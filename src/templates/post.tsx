@@ -106,6 +106,7 @@ const Content = styled.article`
 
   img {
     border-radius: 4px;
+    max-width: 100%;
   }
 
   img + em,

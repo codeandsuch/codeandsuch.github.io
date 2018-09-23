@@ -23,6 +23,7 @@ const PostHeader = styled.header`
   justify-content: center;
   align-items: center;
   padding: 64px 0 56px;
+  margin-top: 8rem;
   margin-bottom: 32px;
   min-height: 20rem;
 

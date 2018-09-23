@@ -14,7 +14,7 @@ const styles = {
     grey: '#8a8a8a',
     darkgrey: '#333333',
 
-    purple: '#978b9e',
+    green: '#9dc59fd1',
     red: '#f05f40',
     turquoise: '#3ea7bb',
 

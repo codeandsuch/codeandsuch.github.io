@@ -13,9 +13,10 @@ const Container = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${(p: Props) => p.compressed ? '10rem' : '20rem'};
+  height: ${(p: Props) => p.compressed ? '8rem' : '20rem'};
   cursor: pointer;
   transition: height 1s ease;
+  position: ${(p: Props) => p.compressed ? 'fixed' : 'normal'};
 `
 
 const Contents = styled.div`
@@ -33,7 +34,7 @@ const Title = styled.h1`
 `
 
 const Highlight = styled.span`
-  color: ${styles.color.purple};
+  color: ${styles.color.green};
   font-size: .9em;
   margin: 0 .6rem 0 .5rem;
   font-weight: normal;

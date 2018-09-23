@@ -7,7 +7,7 @@ const Text = styled.footer`
   text-align: center;
   margin: 4rem 0 2.5rem 0;
   font-size: 1.4em;
-  color: ${styles.color.lightgrey};
+  color: ${styles.color.grey};
 
   @media only screen and (max-width: ${styles.width.medium}) {
     font-size: 1.2em;

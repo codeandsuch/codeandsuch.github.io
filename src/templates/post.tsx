@@ -7,6 +7,7 @@ import Link from 'gatsby-link'
 import Header from '../components/Header'
 import styles from '../styles'
 import './prism.css'
+import Share from '../components/Share';
 
 const Container = styled.div`
   display: flex;
@@ -171,7 +172,7 @@ class BlogPost extends React.Component<Props> {
       : null
 
     const {
-      frontmatter: { title, date, author },
+      frontmatter: { title, date, author, path, twitterHandle },
       html,
       excerpt,
     } = this.props.data.markdownRemark
@@ -205,6 +206,8 @@ class BlogPost extends React.Component<Props> {
         </BackButton>
 
         <Content dangerouslySetInnerHTML={{ __html: html }} />
+
+        <Share link={`https://codeandsuch.github.io${path}`} { ...{ title, twitterHandle } }/>
       </Container>
     )
   }
@@ -229,6 +232,7 @@ export const pageQuery = graphql`
         author
         date(formatString: "Do MMMM YYYY")
         path
+        twitterHandle
       }
     }
   }

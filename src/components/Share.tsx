@@ -1,16 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import facebookIcon from '../assets/facebook-color.svg'
 import twitterIcon from '../assets/twitter-color.svg'
 import styles from '../styles'
 
 
-const facebookAppId = '961873467305779'
-
 const Container = styled.div`
   width: 100%;
-  max-width: 700px;
+  max-width: ${styles.width.contentMax};
 `
 
 const Content = styled.div`
@@ -25,48 +22,50 @@ const Content = styled.div`
 const Divider = styled.div`
   user-select: none;
   width: 100%;
-  display: flex;
-  justify-content: center;
   font-size: 15px;
-  margin: 40px 0;
+  margin: 10rem 0 6rem 3rem;
   line-height: 0px;
   letter-spacing: 20px;
-  color: ${styles.color.lightgrey};
+  color: #c5c5c5;
 `
 
 const ShareLink = styled.a`
-  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const ShareIcon = styled.img`
   width: 32px;
   height: 32px;
+  margin-left: 16px;
 `
 
-const ShareItem = (props: { icon: string; alt: string; link: string }) => (
+const Text = styled.span`
+  font-size: 1.6em;
+`
+
+const ShareItem = (props: { icon: string; alt: string; link: string, text: string }) => (
   <ShareLink href={props.link} target="_blank" rel="noreferrer noopener">
+    <Text>{props.text}</Text>
     <ShareIcon src={props.icon} alt={props.alt} />
   </ShareLink>
 )
 
-const Share = (props: { link: string; title: string }) => (
+const Share = (props: { link: string; title: string, twitterHandle: string }) => (
   <Container>
     <Divider>°°°</Divider>
     <Content>
-      {/* <Text>If you liked this post, help me spread the word:</Text> */}
-      <ShareItem
-        icon={facebookIcon}
-        alt="Share on Facebook"
-        link={`https://www.facebook.com/dialog/share?app_id=${facebookAppId}&href=${encodeURI(
-          props.link
-        )}`}
-      />
       <ShareItem
         icon={twitterIcon}
         alt="Share on Twitter"
         link={`https://twitter.com/intent/tweet?text=${encodeURI(
-          `${props.title} by @kalvixander ${props.link}`
+          `${props.title} by ${props.twitterHandle} ${props.link}`
         )}`}
+        text='Liked this post? Feel free to share it on Twitter!'
       />
     </Content>
   </Container>

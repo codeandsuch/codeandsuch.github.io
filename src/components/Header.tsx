@@ -17,7 +17,7 @@ const Container = styled(Link)`
   height: ${(p: Props) => p.compressed ? '5rem' : '20rem'};
   padding: ${(p: Props) => p.compressed ? 0 : '32px 16px'};
   position: ${(p: Props) => p.compressed ? 'fixed' : 'normal'};
-  box-shadow: ${(p: Props) => p.compressed ? '0 3px 5px rgba(57, 63, 72, 0.2)' : 'none'};
+  box-shadow: ${(p: Props) => p.compressed ? '0 3px 5px rgba(57, 63, 72, 0.15)' : 'none'};
 `
 
 const Contents = styled.div`

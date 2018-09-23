@@ -3,6 +3,7 @@ title: "My essential VS Code extensions as of September 2018"
 author: "Kalle Bornemark"
 date: "2018-09-09"
 path: "/extensions-sept-18"
+twitterHandle: "@kallebornemark"
 ---
 
 One of the things I enjoy most as a developer is to continuously find new ways to improve my workflow and work environment. I'm thus always on the lookout for new helpful tweaks and extensions.

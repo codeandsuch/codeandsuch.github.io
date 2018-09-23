@@ -16,6 +16,7 @@ type Post = {
     path: string
     author: string
     date: string
+    twitterHandle: string
   }
   excerpt: string
   html: string

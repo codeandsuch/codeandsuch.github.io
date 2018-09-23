@@ -11,7 +11,7 @@ const styles = {
     darkblue: '#352f4a',
 
     lightgrey: '#f8f8f8',
-    grey: '#8a8a8a',
+    grey: '#adadad',
     darkgrey: '#333333',
 
     green: '#9dc59fd1',

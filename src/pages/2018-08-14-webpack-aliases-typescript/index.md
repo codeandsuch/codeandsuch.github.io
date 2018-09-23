@@ -3,6 +3,7 @@ title: "Using Webpack aliases with Typescript and Jest"
 author: "Kalle Bornemark"
 date: "2018-08-14"
 path: "/webpack-aliases-typescript"
+twitterHandle: "@kallebornemark"
 ---
 
 This small tutorial will show you how to set up [Webpack](https://webpack.js.org/) aliases for your [Typescript](https://www.typescriptlang.org/) and [Jest](https://jestjs.io/) project.

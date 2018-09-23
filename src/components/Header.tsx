@@ -7,16 +7,17 @@ import bg from '../assets/bg-blue-noise.png';
 const Container = styled(Link)`
   /* background-color: ${styles.color.darkblue}; */
   background-image: url(${bg});
-  padding: 32px 16px;
   color: white;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${(p: Props) => p.compressed ? '8rem' : '20rem'};
   cursor: pointer;
   transition: height 1s ease;
+  height: ${(p: Props) => p.compressed ? '5rem' : '20rem'};
+  padding: ${(p: Props) => p.compressed ? 0 : '32px 16px'};
   position: ${(p: Props) => p.compressed ? 'fixed' : 'normal'};
+  box-shadow: ${(p: Props) => p.compressed ? '0 3px 5px rgba(57, 63, 72, 0.2)' : 'none'};
 `
 
 const Contents = styled.div`
@@ -27,9 +28,9 @@ const Contents = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: ${(p: Props) => p.compressed ? '2.9rem' : '3.3rem'};
+  font-size: ${(p: Props) => p.compressed ? '2.6rem' : '3.3rem'};
   line-height: ${(p: Props) => p.compressed ? '2.5rem' : '3rem'};
-  letter-spacing: ${(p: Props) => p.compressed ? '1.2px' : '1.5px'};
+  letter-spacing: ${(p: Props) => p.compressed ? '1.1px' : '1.5px'};
   transition: font-size 1s ease;
 `
 
@@ -41,7 +42,7 @@ const Highlight = styled.span`
 `
 
 const Subtext = styled.h4`
-  font-size: ${(p: Props) => p.compressed ? '1.15rem' : '1.3rem'};
+  font-size: ${(p: Props) => p.compressed ? '1.05rem' : '1.3rem'};
   line-height: 2.5rem;
   display: flex;
   letter-spacing: .5px;
@@ -58,9 +59,11 @@ const Header: React.SFC<Props> = ({ compressed }) => (
   <Container to='/' { ...{ compressed } }>
     <Contents>
       <Title { ...{ compressed } }>code<Highlight>&</Highlight>such</Title>
-      <Subtext { ...{ compressed } }>
-        A blog about code, and such.
-      </Subtext>
+      { !compressed &&
+        <Subtext { ...{ compressed } }>
+          A blog about code, and such.
+        </Subtext>
+      }
     </Contents>
   </Container>
 )

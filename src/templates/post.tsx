@@ -62,7 +62,7 @@ const Title = styled.h1`
 const Subtext = styled.div`
   display: flex;
   flex-wrap: wrap;
-  color: ${styles.color.grey};
+  color: ${styles.color.grayblue};
   font-size: 1.6em;
 `
 
@@ -78,14 +78,13 @@ const Content = styled.article`
   padding: 0 16px;
   width: 100%;
 
-  & > *:not(:first-child) {
-    margin-top: 32px;
+  @media only screen and (max-width: ${styles.width.medium}px) {
+    font-size: 1.4rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @media only screen and (max-width: ${styles.width.contentMax + 30}px) {
-      margin-left: 1rem;
-    }
+
+  & > *:not(:first-child) {
+    margin-top: 32px;
   }
 
   h2 + *,  h3 + *, h4 + *, h5 + *, h6 + * {

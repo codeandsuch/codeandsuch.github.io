@@ -14,11 +14,15 @@ const Container = styled(Link)`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: height 1s ease;
+  transition: height .1s ease-out;
   height: ${(p: any) => p.to.state.compressed ? '5rem' : '20rem' };
   padding: ${(p: any) => p.to.state.compressed ? 0 : '32px 16px'};
   position: ${(p: any) => p.to.state.compressed ? 'fixed' : 'normal'};
   box-shadow: ${(p: any) => p.to.state.compressed ? '0 3px 5px rgba(57, 63, 72, 0.15)' : 'none'};
+
+  @media only screen and (max-width: ${styles.width.medium}px) {
+    height: ${(p: any) => p.to.state.compressed ? '5rem' : '17rem' };
+  }
 `
 
 const Contents = styled.div`

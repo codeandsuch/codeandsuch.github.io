@@ -25,7 +25,8 @@ const Title = styled.h3`
   line-height: 4rem;
 
   @media only screen and (max-width: ${styles.width.medium}px) {
-    font-size: 2.5em;
+    font-size: 2.3em;
+    line-height: 3.5rem;
   }
 `
 
@@ -34,6 +35,12 @@ const Subtext = styled.h4`
   line-height: 4rem;
   display: flex;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: ${styles.width.medium}px) {
+    font-size: 1.4em;
+    line-height: 2.7rem;
+    margin: 1.5rem 0;
+  }
 `
 
 const SubtextDot = styled.div`
@@ -43,6 +50,10 @@ const SubtextDot = styled.div`
 const Excerpt = styled.p`
   font-size: 1.6rem;
   line-height: 2.8rem;
+
+  @media only screen and (max-width: ${styles.width.medium}px) {
+    font-size: 1.4rem;
+  }
 `
 
 interface Props {

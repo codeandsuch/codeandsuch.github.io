@@ -42,17 +42,21 @@ const ShareLink = styled.a`
 const ShareIcon = styled.img`
   width: 32px;
   height: 32px;
-  margin-left: 16px;
+  margin-right: 16px;
 `
 
 const Text = styled.span`
   font-size: 1.6em;
+
+  @media only screen and (max-width: ${styles.width.contentMax + 30}px) {
+    font-size: 1.3em;
+  }
 `
 
 const ShareItem = (props: { icon: string; alt: string; link: string, text: string }) => (
   <ShareLink href={props.link} target="_blank" rel="noreferrer noopener">
-    <Text>{props.text}</Text>
     <ShareIcon src={props.icon} alt={props.alt} />
+    <Text>{props.text}</Text>
   </ShareLink>
 )
 

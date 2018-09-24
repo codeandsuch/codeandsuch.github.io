@@ -16,7 +16,7 @@ gatsby develop
 - [X] Improve logo
 - [ ] Google Analytics
 - [ ] Favicon
-- [ ] Post footer
+- [X] Post footer
 - [ ] Pagination
 - [ ] Search
 

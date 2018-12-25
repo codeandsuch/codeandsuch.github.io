@@ -15,10 +15,13 @@ pre {
   color: #3ea7bb;
 }
 
-.token.comment,
-.token.block-comment,
 .token.punctuation {
   color: #5f6364;
+}
+
+.token.block-comment,
+.token.comment {
+  color: #b3b9bb;
 }
 
 .token.property,

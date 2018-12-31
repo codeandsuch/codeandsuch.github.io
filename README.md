@@ -1,6 +1,7 @@
 # code & such
 
 ## Get started
+
 ```
 yarn
 yarn global add gatsby-cli
@@ -8,14 +9,15 @@ gatsby develop
 ```
 
 ## Todo
-- [X] Inline pre
-- [X] Publish to github pages
-- [X] Write an article
-- [X] Move repo from personal account
-- [X] Improve logo
+
+- [x] Inline pre
+- [x] Publish to github pages
+- [x] Write an article
+- [x] Move repo from personal account
+- [x] Improve logo
 - [ ] Add Google Analytics
-- [ ] Create Favicon
-- [X] Post signature
+- [x] Create Favicon
+- [x] Post signature
 - [ ] Pagination
 - [ ] Search
 - [ ] Tags

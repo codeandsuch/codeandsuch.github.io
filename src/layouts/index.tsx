@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components'
 
 import Footer from '../components/Footer'
-// import favicon16 from './favicons/16.png'
+import favicon16 from './favicons/16.png'
 // import favicon32 from './favicons/32.png'
 // import favicon48 from './favicons/48.png'
 import styles from '../styles'
@@ -50,7 +50,7 @@ class Template extends React.Component<Props> {
         <Helmet title="code & such">
           <html lang="en" />
 
-          {/* <link rel="icon" type="image/png" sizes="16x16" href={favicon16} /> */}
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           {/* <link rel="icon" type="image/png" sizes="32x32" href={favicon32} /> */}
           {/* <link rel="icon" type="image/png" sizes="48x48" href={favicon48} /> */}
 

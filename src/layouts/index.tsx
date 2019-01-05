@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled, { injectGlobal } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import Footer from '../components/Footer'
 // import favicon16 from './favicons/16.png'
@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 // import favicon48 from './favicons/48.png'
 import styles from '../styles'
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   html {
     height: 100%;
     font-size: 10px;
@@ -47,6 +47,7 @@ class Template extends React.Component<Props> {
 
     return (
       <Container>
+        <GlobalStyles />
         <Helmet title="code & such">
           <html lang="en" />
 

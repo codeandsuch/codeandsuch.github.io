@@ -50,7 +50,7 @@ const BackButton = styled.div`
 const Title = styled.h1`
   color: ${styles.color.darkblue};
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-size: 3.2em;
 
   @media only screen and (max-width: ${styles.width.medium}px) {
@@ -61,10 +61,19 @@ const Title = styled.h1`
 
 const Subtext = styled.div`
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   color: ${styles.color.grayblue};
   font-size: 1.6em;
 `
+
+const SubtextAvatar = styled.div((props: any) => ({
+  borderRadius: "50%",
+  background: `url(${props.src})`,
+  width: 48,
+  height: 48,
+  marginRight: 10
+}))
 
 const SubtextDot = styled.span`
   margin: 0 12px;
@@ -181,6 +190,9 @@ class BlogPost extends React.Component<Props> {
       frontmatter: { title, date, author, path, twitterHandle },
       html,
       excerpt,
+      fields: {
+        twitterAvatarUrl
+      }
     } = this.props.data.markdownRemark
 
     const textWithoutHTML = html.replace(/<[^>]*>/g, '')
@@ -198,6 +210,7 @@ class BlogPost extends React.Component<Props> {
           <HeaderContents>
             <Title>{title}</Title>
             <Subtext>
+              <SubtextAvatar src={twitterAvatarUrl}></SubtextAvatar>
               {author}
               <SubtextDot>•</SubtextDot>
               {date}
@@ -239,6 +252,9 @@ export const pageQuery = graphql`
         date(formatString: "Do MMMM YYYY")
         path
         twitterHandle
+      }
+      fields {
+        twitterAvatarUrl
       }
     }
   }

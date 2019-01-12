@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import readingTime from 'reading-time'
 
 import styles from '../styles'
+import { PostHeaderContents, PostAvatar, PostSubtext, PostTitle, PostSubtextEmoji, PostSubtextDot } from '../templates/post';
 
 const Post = styled.div`
   background-color: ${styles.color.lightgrey};
@@ -17,41 +18,59 @@ const Post = styled.div`
 
 const PostLink = styled(Link)`
   display: block;
-  padding: 24px;
+  padding: 24px 0;
 `
 
-const Title = styled.h3`
-  font-size: 2.8rem;
-  line-height: 4rem;
-
-  @media only screen and (max-width: ${styles.width.medium}px) {
-    font-size: 2.3em;
-    line-height: 3.5rem;
+const PostListHeaderContents = styled(PostHeaderContents)`
+  grid-row-gap: .7rem;
+  grid-column-gap: 1.5rem;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    'avatar title'
+    'avatar subtext'
+    'excerpt excerpt';
+  @media (max-width: ${styles.width.small}px) {
+    grid-template-columns: 1fr min-content;
+    grid-template-areas:
+      'title title'
+      'subtext avatar'
+      'excerpt excerpt';
   }
 `
 
-const Subtext = styled.h4`
-  font-size: 1.4rem;
+const PostListTitle = styled(PostTitle)`
+  font-size: 2.4rem;
   line-height: 4rem;
-  display: flex;
-  flex-wrap: wrap;
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
-    font-size: 1.4em;
-    line-height: 2.7rem;
-    margin: 1.5rem 0;
+  @media (max-width: ${styles.width.medium}px) {
+    font-size: 2em;
+    line-height: 3rem;
   }
 `
 
-const SubtextDot = styled.div`
-  margin: 0 12px;
+const PostListSubtext = styled(PostSubtext)`
+  @media (max-width: ${styles.width.small}px) {
+    flex-direction: column;
+    align-items: flex-start;
+    >:not(:last-child) {
+      margin-bottom: .2rem;
+    }
+  }
+`
+
+const PostListAvatar = styled(PostAvatar)`
+  width: 33px;
+  height: 33px;
 `
 
 const Excerpt = styled.p`
-  font-size: 1.6rem;
-  line-height: 2.8rem;
+  margin-top: 1rem;
+  grid-area: excerpt;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  opacity: .8;
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
+  @media (max-width: ${styles.width.medium}px) {
     font-size: 1.4rem;
   }
 `
@@ -63,23 +82,30 @@ interface Props {
 const Posts: React.SFC<Props> = ({ posts }) => (
   <div>
     {posts.map(post => {
-      const { title, path, author, date } = post.node.frontmatter
+      const {
+        frontmatter: { title, path, author, date, twitterHandle },
+        fields: { twitterAvatarUrl }
+      } = post.node
 
       const textWithoutHTML = post.node.html.replace(/<[^>]*>/g, '')
       const readTime = readingTime(textWithoutHTML)
+      const twitterUrl = `https://www.twitter.com/${twitterHandle}`
 
       return (
         <Post key={path}>
           <PostLink to={path}>
-            <Title>{title}</Title>
-            <Subtext>
-              {author}
-              <SubtextDot>•</SubtextDot>
-              {date}
-              <SubtextDot>•</SubtextDot>
-              {readTime.text}
-            </Subtext>
-            <Excerpt>{post.node.excerpt}</Excerpt>
+            <PostListHeaderContents>
+              <PostListAvatar src={twitterAvatarUrl} href={twitterUrl} />
+              <PostListTitle>{title}</PostListTitle>
+              <PostListSubtext>
+                <div><PostSubtextEmoji>📝</PostSubtextEmoji><a href=''>{author}</a></div>
+                <PostSubtextDot>•</PostSubtextDot>
+                <div><PostSubtextEmoji>📅</PostSubtextEmoji><span>{date}</span></div>
+                <PostSubtextDot>•</PostSubtextDot>
+                <div><PostSubtextEmoji>☕</PostSubtextEmoji><span>{readTime.text}</span></div>
+              </PostListSubtext>
+              <Excerpt>{post.node.excerpt}</Excerpt>
+            </PostListHeaderContents>
           </PostLink>
         </Post>
       )

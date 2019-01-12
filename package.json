@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "@types/react-helmet": "^5.0.5",
+    "@types/styled-components": "^4.1.5",
+    "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.7.1",
     "gatsby": "^1.9.250",
     "gatsby-cli": "^1.1.50",
@@ -50,9 +52,10 @@
     "gatsby-transformer-sharp": "^1.6.1",
     "polished": "^1.9.3",
     "react": "^16.5.1",
+    "react-dom": "^16.7.0",
     "react-pose": "^3.3.0",
     "reading-time": "^1.1.0",
-    "styled-components": "^3.4.6"
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

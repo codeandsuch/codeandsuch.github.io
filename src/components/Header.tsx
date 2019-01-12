@@ -6,7 +6,6 @@ import bg from '../assets/bg-blue-noise.png';
 import styles from '../styles';
 
 const Container = styled(Link)`
-  /* background-color: ${styles.color.darkblue}; */
   background-image: url(${bg});
   color: white;
   width: 100%;
@@ -21,7 +20,7 @@ const Container = styled(Link)`
   box-shadow: ${(p: any) => p.to.state.compressed ? '0 3px 5px rgba(57, 63, 72, 0.15)' : 'none'};
   z-index: 99;
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
+  @media (max-width: ${styles.width.medium}px) {
     height: ${(p: any) => p.to.state.compressed ? '5rem' : '17rem' };
   }
 `

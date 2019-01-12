@@ -67,7 +67,7 @@ const Subtext = styled.div`
   font-size: 1.6em;
 `
 
-const SubtextAvatar = styled.div((props: any) => ({
+const SubtextAvatar = styled.a((props: any) => ({
   borderRadius: "50%",
   background: `url(${props.src})`,
   width: 48,
@@ -197,6 +197,7 @@ class BlogPost extends React.Component<Props> {
 
     const textWithoutHTML = html.replace(/<[^>]*>/g, '')
     const readTime = readingTime(textWithoutHTML)
+    const twitterUrl = `https://www.twitter.com/${twitterHandle}`
 
     return (
       <Container>
@@ -210,8 +211,8 @@ class BlogPost extends React.Component<Props> {
           <HeaderContents>
             <Title>{title}</Title>
             <Subtext>
-              <SubtextAvatar src={twitterAvatarUrl}></SubtextAvatar>
-              {author}
+              <SubtextAvatar src={twitterAvatarUrl} href={twitterUrl}></SubtextAvatar>
+              <a href={twitterUrl}>{author}</a>
               <SubtextDot>•</SubtextDot>
               {date}
               <SubtextDot>•</SubtextDot>

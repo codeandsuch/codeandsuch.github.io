@@ -48,7 +48,7 @@ const ShareIcon = styled.img`
 const Text = styled.span`
   font-size: 1.6em;
 
-  @media only screen and (max-width: ${styles.width.contentMax + 30}px) {
+  @media (max-width: ${styles.width.contentMax + 30}px) {
     font-size: 1.3em;
   }
 `

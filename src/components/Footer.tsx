@@ -9,7 +9,7 @@ const Text = styled.footer`
   font-size: 1.4em;
   color: ${styles.color.grey};
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
+  @media (max-width: ${styles.width.medium}px) {
     font-size: 1.2em;
   }
 `

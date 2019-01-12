@@ -16,7 +16,7 @@ const Contents = styled.div`
   padding: 0 16px;
   max-width: 1200px;
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
+  @media (max-width: ${styles.width.medium}px) {
     padding: 0;
     margin-top: 0;
   }
@@ -64,6 +64,9 @@ export const pageQuery = graphql`
             author
             date(formatString: "Do MMMM YYYY")
             title
+          }
+          fields {
+            twitterAvatarUrl
           }
           excerpt(pruneLength: 235)
           html

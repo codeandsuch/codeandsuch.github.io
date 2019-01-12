@@ -28,15 +28,9 @@ const PostHeader = styled.header`
   margin-bottom: 32px;
   min-height: 20rem;
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
+  @media (max-width: ${styles.width.medium}px) {
     padding: 32px 0 28px;
   }
-`
-
-const HeaderContents = styled.div`
-  max-width: ${styles.width.contentMax}px;
-  width: 100%;
-  padding: 0 16px;
 `
 
 const BackButton = styled.div`
@@ -47,36 +41,76 @@ const BackButton = styled.div`
   margin-bottom: 2rem;
 `
 
-const Title = styled.h1`
-  color: ${styles.color.darkblue};
-  font-weight: bold;
-  margin-bottom: 12px;
-  font-size: 3.2em;
-
-  @media only screen and (max-width: ${styles.width.medium}px) {
-    margin-bottom: 2rem;
-    font-size: 2.5em;
+export const PostHeaderContents = styled.div`
+  max-width: ${styles.width.contentMax}px;
+  width: 100%;
+  padding: 0 16px;
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1.5rem;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    'avatar title'
+    'avatar subtext';
+  @media (max-width: ${styles.width.small}px) {
+    grid-template-columns: 1fr min-content;
+    grid-template-areas:
+      'title title'
+      'subtext avatar';
   }
 `
 
-const Subtext = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  color: ${styles.color.grayblue};
-  font-size: 1.6em;
-`
-
-const SubtextAvatar = styled.a((props: any) => ({
+export const PostAvatar = styled.a((props: any) => ({
+  gridArea: 'avatar',
+  display: 'flex',
+  flexShrink: 0,
   borderRadius: "50%",
   background: `url(${props.src})`,
   width: 48,
   height: 48,
-  marginRight: 10
+  backgroundSize: 'cover',
+  alignSelf: 'center',
 }))
 
-const SubtextDot = styled.span`
+export const PostTitle = styled.h1`
+  grid-area: title;
+  color: ${styles.color.darkblue};
+  font-weight: bold;
+  font-size: 3.2em;
+
+  @media (max-width: ${styles.width.medium}px) {
+    font-size: 2.5em;
+  }
+`
+
+export const PostSubtext = styled.div`
+  grid-area: subtext;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  flex-wrap: wrap;
+  color: ${styles.color.grayblue};
+  font-size: 1.42rem;
+
+  @media (max-width: ${styles.width.small}px) {
+    flex-direction: column;
+    align-items: flex-start;
+    >:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+`
+
+export const PostSubtextEmoji = styled.span`
+  margin-right: .5rem;
+`
+
+export const PostSubtextDot = styled.span`
   margin: 0 12px;
+  opacity: 0.8;
+  @media (max-width: ${styles.width.small}px) {
+    display: none;
+  }
 `
 
 const Content = styled.article`
@@ -87,7 +121,7 @@ const Content = styled.article`
   padding: 0 16px;
   width: 100%;
 
-  @media only screen and (max-width: ${styles.width.medium}px) {
+  @media (max-width: ${styles.width.medium}px) {
     font-size: 1.4rem;
   }
 
@@ -208,17 +242,17 @@ class BlogPost extends React.Component<Props> {
         <Header compressed/>
 
         <PostHeader>
-          <HeaderContents>
-            <Title>{title}</Title>
-            <Subtext>
-              <SubtextAvatar src={twitterAvatarUrl} href={twitterUrl}></SubtextAvatar>
-              <a href={twitterUrl}>{author}</a>
-              <SubtextDot>•</SubtextDot>
-              {date}
-              <SubtextDot>•</SubtextDot>
-              {readTime.text}
-            </Subtext>
-          </HeaderContents>
+          <PostHeaderContents>
+            <PostAvatar src={twitterAvatarUrl} href={twitterUrl}></PostAvatar>
+            <PostTitle>{title}</PostTitle>
+            <PostSubtext>
+              <div><PostSubtextEmoji>📝</PostSubtextEmoji><a href={twitterUrl}>{author}</a></div>
+              <PostSubtextDot>•</PostSubtextDot>
+              <div><PostSubtextEmoji>📅</PostSubtextEmoji><span>{date}</span></div>
+              <PostSubtextDot>•</PostSubtextDot>
+              <div><PostSubtextEmoji>☕</PostSubtextEmoji><span>{readTime.text}</span></div>
+            </PostSubtext>
+          </PostHeaderContents>
         </PostHeader>
 
         <BackButton>

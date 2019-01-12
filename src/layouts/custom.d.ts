@@ -20,7 +20,7 @@ type Post = {
   }
   excerpt: string
   html: string
-  node: any,
+  node: Post,
   fields: {
     twitterAvatarUrl: string
   }

@@ -21,7 +21,6 @@ exports.onPreBootstrap = async () => {
 
         TWITTER_API_TOKEN = response.data.access_token || null
     } catch (err) {
-        console.log(err)
         throw new Error(`Failed to get Twitter API token. ${err.response.status} ${err.response.statusText}`)
     }
 }

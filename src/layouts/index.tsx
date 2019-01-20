@@ -4,8 +4,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import Footer from '../components/Footer'
 import favicon16 from './favicons/16.png'
-// import favicon32 from './favicons/32.png'
-// import favicon48 from './favicons/48.png'
 import styles from '../styles'
 
 const GlobalStyles = createGlobalStyle`
@@ -52,8 +50,6 @@ class Template extends React.Component<Props> {
           <html lang="en" />
 
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-          {/* <link rel="icon" type="image/png" sizes="32x32" href={favicon32} /> */}
-          {/* <link rel="icon" type="image/png" sizes="48x48" href={favicon48} /> */}
 
           <meta name="theme-color" content={styles.color.darkblue} />
         </Helmet>

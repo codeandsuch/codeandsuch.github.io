@@ -16,16 +16,21 @@ npm i -g gatsby-cli
 gatsby develop
 ```
 
+## How to write a post
+
+1. Fork the `develop` branch
+2. Write the post using [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Have a look at the other posts for how-to, inspiration, and general post layout.
+3. Enter the posts metadata (title, date, Twitter handle, etc)
+4. Open a pull request from your fork back to `develop`
+
 ## Todo
 
-- [x] Inline pre
-- [x] Publish to github pages
-- [x] Write an article
 - [x] Move repo from personal account
+- [x] Publish to Github pages
 - [x] Improve logo
-- [ ] Add Google Analytics
-- [x] Create Favicon
+- [x] Favicon
 - [x] Twitter integration
+- [ ] Google Analytics
 - [ ] Pagination
 - [ ] Search
 - [ ] Tags

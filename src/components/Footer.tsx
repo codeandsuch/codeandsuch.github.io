@@ -14,9 +14,13 @@ const Text = styled.footer`
   }
 `
 
+const Link = styled.a`
+  color: ${styles.color.green};
+`
+
 const Footer = () => (
   <Text>
-    MIT Ⓒ Kalle Bornemark
+    MIT Ⓒ <Link href="https://kallebornemark.github.io/">Kalle Bornemark</Link>
   </Text>
 )
 

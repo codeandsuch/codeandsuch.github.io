@@ -130,6 +130,10 @@ const Content = styled.article`
     margin-top: 32px;
   }
 
+  h2 {
+    font-size: 1.3em;
+  }
+
   h2 + *,  h3 + *, h4 + *, h5 + *, h6 + * {
     margin-top: 16px !important;
   }

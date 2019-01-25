@@ -28,6 +28,10 @@ const Divider = styled.div`
   letter-spacing: 20px;
   color: #c5c5c5;
   text-align: center;
+
+  @media (max-width: ${styles.width.medium}px) {
+    margin: 6rem 0 5rem 0;
+  }
 `
 
 const ShareLink = styled.a`

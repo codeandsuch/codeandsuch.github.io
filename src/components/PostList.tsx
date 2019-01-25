@@ -9,10 +9,13 @@ import { PostHeaderContents, PostAvatar, PostSubtext, PostTitle, PostSubtextEmoj
 const Post = styled.div`
   background-color: ${styles.color.lightgrey};
   margin-bottom: 16px;
-  color: ${styles.color.darkgrey};
 
   &:hover {
     background-color: ${styles.color.hover};
+  }
+
+  @media (max-width: ${styles.width.medium}px) {
+    background-color: white;
   }
 `
 
@@ -71,6 +74,7 @@ const Excerpt = styled.p`
   opacity: .8;
 
   @media (max-width: ${styles.width.medium}px) {
+    margin-top: .2rem;
     font-size: 1.4rem;
   }
 `

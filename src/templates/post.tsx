@@ -149,6 +149,7 @@ const Content = styled.article`
   }
 
   a {
+    word-break: break-all;
     color: ${styles.color.turquoise};
     text-decoration: underline;
     :visited {
@@ -177,6 +178,7 @@ const Content = styled.article`
     padding: 12px;
     font-size: 1.4rem;
     border-radius: 4px;
+    word-break: break-all;
 
     code {
       padding: 0;

@@ -42,7 +42,7 @@ Below is a list of things you can do when putting together your Dockerfile to in
 * Do not download any unnecessary packages.
 * Remove unnecessary packages pre-existing in the image.
 * If possible use `--no-cache` when building for production to avoid image poisoning via the cache.
-* Use a security scanner to scan your images. There are many to choose from. Personally, I like `https://github.com/aquasecurity/microscanner` together with `https://github.com/lukebond/microscanner-wrapper`
+* Use a security scanner to scan your images. There are many to choose from. Personally, I like [https://github.com/aquasecurity/microscanner](https://github.com/aquasecurity/microscanner) together with [https://github.com/lukebond/microscanner-wrapper](https://github.com/lukebond/microscanner-wrapper)
 * Isolate containers with user namespaces
 
 ## Image size and how it relates to security

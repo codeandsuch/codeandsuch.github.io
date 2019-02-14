@@ -7,7 +7,7 @@ const styles = {
   },
 
   color: {
-    lightblue: '#f2f5fa',
+    lightblue: '#a4bed2',
     blue: '#7272a3',
     darkblue: '#352f4a',
     grayblue: '#35304ab0',

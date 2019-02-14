@@ -51,7 +51,7 @@
     "gatsby-transformer-remark": "^1.7.1",
     "gatsby-transformer-sharp": "^1.6.1",
     "polished": "^1.9.3",
-    "react": "^16.5.1",
+    "react": "^16.8.1",
     "react-dom": "^16.7.0",
     "react-pose": "^3.3.0",
     "reading-time": "^1.1.0",

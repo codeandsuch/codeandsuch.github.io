@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import twitterIcon from '../assets/twitter-color.svg'
 import styles from '../styles'
 
-
 const Container = styled.div`
   width: 100%;
   max-width: ${styles.width.contentMax}px;
@@ -37,7 +36,7 @@ const Divider = styled.div`
 const ShareLink = styled.a`
   display: flex;
   align-items: center;
-  opacity: .7;
+  opacity: 0.7;
   &:hover {
     opacity: 1;
   }
@@ -57,14 +56,23 @@ const Text = styled.span`
   }
 `
 
-const ShareItem = (props: { icon: string; alt: string; link: string, text: string }) => (
+const ShareItem = (props: {
+  icon: string
+  alt: string
+  link: string
+  text: string
+}) => (
   <ShareLink href={props.link} target="_blank" rel="noreferrer noopener">
     <ShareIcon src={props.icon} alt={props.alt} />
     <Text>{props.text}</Text>
   </ShareLink>
 )
 
-const Share = (props: { link: string; title: string, twitterHandle: string }) => (
+const Share = (props: {
+  link: string
+  title: string
+  twitterHandle: string
+}) => (
   <Container>
     <Divider>°°°</Divider>
     <Content>
@@ -74,7 +82,7 @@ const Share = (props: { link: string; title: string, twitterHandle: string }) =>
         link={`https://twitter.com/intent/tweet?text=${encodeURI(
           `${props.title} by ${props.twitterHandle} ${props.link}`
         )}`}
-        text='Liked this post? Feel free to share it on Twitter!'
+        text="Liked this post? Feel free to share it on Twitter!"
       />
     </Content>
   </Container>

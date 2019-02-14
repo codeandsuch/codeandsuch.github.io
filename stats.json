@@ -21,8 +21,8 @@
       "path---webpack-aliases-typescript-42db291190b17d123a04.js.map"
     ],
     "path---index": [
-      "path---index-850535a9b048d1c4f0a5.js",
-      "path---index-850535a9b048d1c4f0a5.js.map"
+      "path---index-12067c8064f3e94ce1cd.js",
+      "path---index-12067c8064f3e94ce1cd.js.map"
     ],
     "commons": [
       "commons-e8ba142de36a99798fa1.js",
@@ -51,13 +51,13 @@
       "component---src-pages-index-tsx-db7491a1c4ad1b8b60ee.js.map"
     ],
     "path---extensions-sept-18": [
-      "path---extensions-sept-18-9bf6baaea979a7792d04.js",
-      "path---extensions-sept-18-9bf6baaea979a7792d04.js.map"
+      "path---extensions-sept-18-f106c854c2beb1266ff8.js",
+      "path---extensions-sept-18-f106c854c2beb1266ff8.js.map"
     ],
     "app": [
-      "app-d4f6870cf6b67de6f4d6.js",
+      "app-8717041e451aa6ca7db1.js",
       "build-js-styles.css",
-      "app-d4f6870cf6b67de6f4d6.js.map",
+      "app-8717041e451aa6ca7db1.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [

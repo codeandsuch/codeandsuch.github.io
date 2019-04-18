@@ -9,7 +9,7 @@ export TWITTER_API_KEY=<TWITTER_API_KEY>
 export TWITTER_API_SECRET=<TWITTER_API_SECRET>
 ```
 
-2. Install packages, switch to `develop` branch and start development server
+2. Switch to `develop` branch, install packages and start development server
 ```
 npm i
 npm i -g gatsby-cli

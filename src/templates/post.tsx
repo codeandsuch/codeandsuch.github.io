@@ -146,6 +146,10 @@ const Content = styled.article`
   ul,
   ol {
     margin-left: 1.1em;
+
+    > li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
   a {
@@ -206,6 +210,10 @@ const Content = styled.article`
 
   iframe {
     border: none;
+  }
+
+  p > a {
+    word-break: keep-all;
   }
 `
 

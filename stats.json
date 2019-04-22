@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-cbfcecf02405b654b53d.js",
-      "component---src-layouts-index-tsx-cbfcecf02405b654b53d.js.map"
+      "component---src-layouts-index-tsx-85223c4a599fe511fc2d.js",
+      "component---src-layouts-index-tsx-85223c4a599fe511fc2d.js.map"
     ],
     "component---src-templates-post-tsx": [
-      "component---src-templates-post-tsx-a29477a74f284ed149e6.js",
-      "component---src-templates-post-tsx-a29477a74f284ed149e6.js.map"
+      "component---src-templates-post-tsx-c0b43fdf8f6bd2fee3ff.js",
+      "component---src-templates-post-tsx-c0b43fdf8f6bd2fee3ff.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -17,12 +17,12 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---webpack-aliases-typescript": [
-      "path---webpack-aliases-typescript-42db291190b17d123a04.js",
-      "path---webpack-aliases-typescript-42db291190b17d123a04.js.map"
+      "path---webpack-aliases-typescript-3d84d652b66aec08bb7b.js",
+      "path---webpack-aliases-typescript-3d84d652b66aec08bb7b.js.map"
     ],
     "path---index": [
-      "path---index-12067c8064f3e94ce1cd.js",
-      "path---index-12067c8064f3e94ce1cd.js.map"
+      "path---index-afb9bd5b5df3e00f533c.js",
+      "path---index-afb9bd5b5df3e00f533c.js.map"
     ],
     "commons": [
       "commons-e8ba142de36a99798fa1.js",
@@ -39,25 +39,29 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---conditional-array-object-literals": [
-      "path---conditional-array-object-literals-41bf435858ca528d711d.js",
-      "path---conditional-array-object-literals-41bf435858ca528d711d.js.map"
+      "path---conditional-array-object-literals-b03eac5e06b62e08f7ec.js",
+      "path---conditional-array-object-literals-b03eac5e06b62e08f7ec.js.map"
+    ],
+    "path---simplify-backticks": [
+      "path---simplify-backticks-36cbd64e79ab86447b87.js",
+      "path---simplify-backticks-36cbd64e79ab86447b87.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-tsx": [
-      "component---src-pages-index-tsx-db7491a1c4ad1b8b60ee.js",
-      "component---src-pages-index-tsx-db7491a1c4ad1b8b60ee.js.map"
+      "component---src-pages-index-tsx-1fbba4a3bbd98b489ea8.js",
+      "component---src-pages-index-tsx-1fbba4a3bbd98b489ea8.js.map"
     ],
     "path---extensions-sept-18": [
-      "path---extensions-sept-18-f106c854c2beb1266ff8.js",
-      "path---extensions-sept-18-f106c854c2beb1266ff8.js.map"
+      "path---extensions-sept-18-6ee80bd6ae995b2243ef.js",
+      "path---extensions-sept-18-6ee80bd6ae995b2243ef.js.map"
     ],
     "app": [
-      "app-8717041e451aa6ca7db1.js",
+      "app-698d351236920a9bb1f1.js",
       "build-js-styles.css",
-      "app-8717041e451aa6ca7db1.js.map",
+      "app-698d351236920a9bb1f1.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -65,8 +69,8 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---container-security": [
-      "path---container-security-7c4b268f74383e707bec.js",
-      "path---container-security-7c4b268f74383e707bec.js.map"
+      "path---container-security-2f2327e4649fc3ff34bb.js",
+      "path---container-security-2f2327e4649fc3ff34bb.js.map"
     ]
   }
 }

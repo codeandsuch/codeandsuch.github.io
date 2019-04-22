@@ -13,10 +13,6 @@ const Post = styled.div`
   &:hover {
     background-color: ${styles.color.hover};
   }
-
-  @media (max-width: ${styles.width.medium}px) {
-    background-color: white;
-  }
 `
 
 const PostLink = styled(Link)`
@@ -25,7 +21,7 @@ const PostLink = styled(Link)`
 `
 
 const PostListHeaderContents = styled(PostHeaderContents)`
-  grid-row-gap: .7rem;
+  grid-row-gap: .4rem;
   grid-column-gap: 1.5rem;
   grid-template-columns: min-content 1fr;
   grid-template-areas:
@@ -42,12 +38,12 @@ const PostListHeaderContents = styled(PostHeaderContents)`
 `
 
 const PostListTitle = styled(PostTitle)`
-  font-size: 2.4rem;
-  line-height: 4rem;
+  font-size: 2.4em;
+  line-height: 3.4rem;
 
   @media (max-width: ${styles.width.medium}px) {
-    font-size: 2em;
-    line-height: 3rem;
+    font-size: 2.4em;
+    line-height: 3.4rem;
   }
 `
 

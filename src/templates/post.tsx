@@ -53,6 +53,7 @@ export const PostHeaderContents = styled.div`
     'avatar title'
     'avatar subtext';
   @media (max-width: ${styles.width.small}px) {
+    grid-row-gap: 2rem;
     grid-template-columns: 1fr min-content;
     grid-template-areas:
       'title title'
@@ -79,7 +80,7 @@ export const PostTitle = styled.h1`
   font-size: 3.2em;
 
   @media (max-width: ${styles.width.medium}px) {
-    font-size: 2.5em;
+    font-size: 2.7em;
   }
 `
 
@@ -95,9 +96,6 @@ export const PostSubtext = styled.div`
   @media (max-width: ${styles.width.small}px) {
     flex-direction: column;
     align-items: flex-start;
-    >:not(:last-child) {
-      margin-bottom: .5rem;
-    }
   }
 `
 
@@ -122,7 +120,7 @@ const Content = styled.article`
   width: 100%;
 
   @media (max-width: ${styles.width.medium}px) {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
 

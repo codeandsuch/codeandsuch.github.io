@@ -12,7 +12,7 @@ const Container = styled.main`
 `
 
 const Contents = styled.div`
-  margin-top: 2rem;
+  margin-top: 4rem;
   padding: 0 16px;
   max-width: 1200px;
 

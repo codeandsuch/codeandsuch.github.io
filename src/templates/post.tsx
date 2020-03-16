@@ -61,17 +61,17 @@ export const PostHeaderContents = styled.div`
   }
 `
 
-export const PostAvatar = styled.a((props: any) => ({
-  gridArea: 'avatar',
-  display: 'flex',
-  flexShrink: 0,
-  borderRadius: "50%",
-  background: `url(${props.src})`,
-  width: 48,
-  height: 48,
-  backgroundSize: 'cover',
-  alignSelf: 'center',
-}))
+export const PostAvatar = styled.a`
+  grid-area: 'avatar';
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: ${(props: {twitterAvatarUrl: string}) => `url(${props.twitterAvatarUrl})`};
+  width: 48;
+  height: 48;
+  background-size: cover;
+  align-self: center;
+`
 
 export const PostTitle = styled.h1`
   grid-area: title;
@@ -255,7 +255,7 @@ class BlogPost extends React.Component<Props> {
 
         <PostHeader>
           <PostHeaderContents>
-            <PostAvatar src={twitterAvatarUrl} href={twitterUrl}></PostAvatar>
+            <PostAvatar twitterAvatarUrl={twitterAvatarUrl} href={twitterUrl}></PostAvatar>
             <PostTitle>{title}</PostTitle>
             <PostSubtext>
               <div><PostSubtextEmoji>📝</PostSubtextEmoji><a href={twitterUrl}>{author}</a></div>

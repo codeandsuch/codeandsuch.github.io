@@ -7,8 +7,7 @@ import styles from '../styles'
 import { PostHeaderContents, PostAvatar, PostSubtext, PostTitle, PostSubtextEmoji, PostSubtextDot } from '../templates/post';
 
 const Post = styled.div`
-  background-color: ${styles.color.lightgrey};
-  margin-bottom: 16px;
+  margin-bottom: 3rem;
 
   &:hover {
     background-color: ${styles.color.hover};
@@ -79,7 +78,7 @@ interface Props {
   posts: Post[]
 }
 
-const Posts: React.SFC<Props> = ({ posts }) => (
+const PostList: React.SFC<Props> = ({ posts }) => (
   <div>
     {posts.map(post => {
       const {
@@ -95,7 +94,7 @@ const Posts: React.SFC<Props> = ({ posts }) => (
         <Post key={path}>
           <PostLink to={path}>
             <PostListHeaderContents>
-              <PostListAvatar src={twitterAvatarUrl} href={twitterUrl} />
+              <PostListAvatar twitterAvatarUrl={twitterAvatarUrl} href={twitterUrl} />
               <PostListTitle>{title}</PostListTitle>
               <PostListSubtext>
                 <div><PostSubtextEmoji>📝</PostSubtextEmoji><a href=''>{author}</a></div>
@@ -113,4 +112,4 @@ const Posts: React.SFC<Props> = ({ posts }) => (
   </div>
 )
 
-export default Posts
+export default PostList

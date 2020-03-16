@@ -6,7 +6,7 @@ import bg from '../assets/bg-blue-noise.png'
 import styles from '../styles'
 
 const Container = styled(Link)`
-  background-image: url(${bg});
+  background-color: #2b2a2f;
   color: white;
   width: 100%;
   display: flex;
@@ -26,15 +26,24 @@ const Container = styled(Link)`
   }
 `
 
+const Inner = styled.div`
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+`
+
 const Contents = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  margin: 1rem 0;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+  text-align: center;
 `
 
 const Title = styled.h1`
-  font-size: ${(p: Props) => (p.compressed ? '2.6rem' : '3.2rem')};
+  font-size: ${(p: Props) => (p.compressed ? '2.3rem' : '2.7rem')};
   line-height: ${(p: Props) => (p.compressed ? '2.5rem' : '3rem')};
   letter-spacing: ${(p: Props) => (p.compressed ? '1.1px' : '1.5px')};
   transition: font-size 1s ease;
@@ -49,10 +58,10 @@ const Highlight = styled.span`
 `
 
 const Subtext = styled.h4`
-  font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.23rem')};
+  font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.1rem')};
   line-height: 1.6;
   display: flex;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.75px;
   color: ${styles.color.subtext};
   font-weight: normal;
   transition: font-size 0.5s ease;
@@ -70,16 +79,18 @@ const Header: React.SFC<Props> = ({ compressed }) => (
       state: { compressed },
     }}
   >
-    <Contents>
-      <Title compressed={compressed}>
-        code
-        <Highlight compressed={compressed}>&</Highlight>
-        such
-      </Title>
-      {!compressed && (
-        <Subtext compressed={compressed}>A blog about code, and such.</Subtext>
-      )}
-    </Contents>
+    <Inner>
+      <Contents>
+        <Title compressed={compressed}>
+          code
+          <Highlight compressed={compressed}>&</Highlight>
+          such
+        </Title>
+        {!compressed && (
+          <Subtext compressed={compressed}>A blog about code, and such.</Subtext>
+        )}
+      </Contents>
+    </Inner>
   </Container>
 )
 

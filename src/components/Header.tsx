@@ -21,7 +21,7 @@ const Container = styled(Link)`
   padding: ${(p: any) => (p.to.state.compressed ? '0 2rem' : '0')};
 
   @media (max-width: ${styles.width.medium}px) {
-    height: ${(p: any) => (p.to.state.compressed ? '5rem' : '40vh')};
+    height: ${(p: any) => (p.to.state.compressed ? '5rem' : '50vh')};
   }
 `
 
@@ -37,15 +37,24 @@ const Contents = styled.div`
   align-items: flex-start;
   justify-content: center;
   height: 100%;
+  width: 100%;
   text-align: center;
+
+  @media (max-width: ${styles.width.medium}px) {
+    align-items: center;
+  }
 `
 
 const Title = styled.h1`
   font-weight: 400;
-  font-size: ${(p: Props) => (p.compressed ? '2.3rem' : '2.7rem')};
+  font-size: ${(p: Props) => (p.compressed ? '2.3rem' : '5.5rem')};
   line-height: ${(p: Props) => (p.compressed ? '2.5rem' : '3rem')};
   letter-spacing: ${(p: Props) => (p.compressed ? '1.1px' : '0.7px')};
   transition: font-size 1s ease;
+
+  @media (max-width: ${styles.width.medium}px) {
+    font-size: ${(p: Props) => (p.compressed ? '2.3rem' : '4rem')};
+  }
 `
 
 const Highlight = styled.span`
@@ -53,17 +62,21 @@ const Highlight = styled.span`
   font-size: 0.85em;
   margin: ${(p: Props) =>
     p.compressed ? '0 .35rem 0 .3rem' : '0 .6rem 0 .5rem'};
-  font-weight: 600;
 `
 
 const Subtext = styled.h4`
   color: ${styles.color.grayblue};
-  font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.2rem')};
+  font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.5rem')};
   line-height: 1.6;
   display: flex;
   font-weight: normal;
   transition: font-size 0.5s ease;
-  margin-top: 0.2rem;
+  margin-top: 1.5rem;
+
+  @media (max-width: ${styles.width.medium}px) {
+    font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.2rem')};
+    margin-top: 0.7rem;
+  }
 `
 
 interface Props {

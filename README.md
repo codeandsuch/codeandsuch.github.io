@@ -3,13 +3,18 @@ All blog about code and such.
 
 ## Get started
 
-1. Set system environment variables by running these commands in your terminal:
+1. Set system environment variables by ether adding them to `.env.development`:
 ```
-export TWITTER_API_KEY=<TWITTER_API_KEY>
-export TWITTER_API_SECRET=<TWITTER_API_SECRET>
+GATSBY_TWITTER_API_KEY=<GATSBY_TWITTER_API_KEY>
+GATSBY_TWITTER_API_SECRET=<GATSBY_TWITTER_API_SECRET>
+```
+or by running these commands in your terminal:
+```
+export GATSBY_TWITTER_API_KEY=<GATSBY_TWITTER_API_KEY>
+export GATSBY_TWITTER_API_SECRET=<GATSBY_TWITTER_API_SECRET>
 ```
 
-2. Switch to `develop` branch, install packages and start development server
+1. Switch to `develop` branch, install packages and start development server
 ```
 npm i
 npm i -g gatsby-cli

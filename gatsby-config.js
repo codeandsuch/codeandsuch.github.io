@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: "/codeandsuch",
   siteMetadata: {
@@ -58,6 +62,12 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
-    'twitter-avatar'
+    {
+      resolve: 'twitter-avatar',
+      options: {
+        twitterApiKey: process.env.TWITTER_API_KEY,
+        twitterApiSecret: process.env.TWITTER_API_SECRET,
+      }
+    }
   ],
 }

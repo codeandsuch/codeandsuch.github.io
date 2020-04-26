@@ -2,13 +2,14 @@ const axios = require('axios')
 
 let TWITTER_API_TOKEN = null
 
-exports.onPreBootstrap = async () => {
-    if (!process.env.TWITTER_API_KEY || !process.env.TWITTER_API_SECRET) {
-        throw new Error('Missing environment variables TWITTER_API_KEY or TWITTER_API_SECRET');
+exports.onPreBootstrap = async (_, pluginOptions) => {
+    const { twitterApiKey, twitterApiSecret } = pluginOptions;
+    if (!twitterApiKey || !twitterApiSecret) {
+        throw new Error('Missing environment variables twitterApiKey or twitterApiSecret');
     }
 
     try {
-        const authorization = Buffer.from(`${process.env.TWITTER_API_KEY}:${process.env.TWITTER_API_SECRET}`).toString('base64')
+        const authorization = Buffer.from(`${twitterApiKey}:${twitterApiSecret}`).toString('base64')
         const response = await axios({
             method: 'POST',
             url: 'https://api.twitter.com/oauth2/token',

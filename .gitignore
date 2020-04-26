@@ -12,3 +12,5 @@ yarn-error.log
 *.sketch
 TODO.md
 .vscode/
+
+.env.*

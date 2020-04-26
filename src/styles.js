@@ -7,7 +7,9 @@ const styles = {
   },
 
   color: {
-    lightblue: '#a4bed2',
+    white: '#fff',
+
+    lightblue: '#639ac5',
     blue: '#7272a3',
     darkblue: '#352f4a',
     grayblue: '#35304ab0',
@@ -21,7 +23,7 @@ const styles = {
     turquoise: '#3ea7bb',
 
     hover: '#ececec',
-    subtext: '#cfcdd4',
+    subtext: '#95929a',
   },
 };
 

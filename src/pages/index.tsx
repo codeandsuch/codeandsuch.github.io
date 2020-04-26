@@ -4,21 +4,20 @@ import styled from 'styled-components'
 import Header from '../components/Header'
 import PostList from '../components/PostList'
 import styles from '../styles'
+import 'typeface-montserrat';
 
 const Container = styled.main`
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 `
 
 const Contents = styled.div`
-  margin-top: 4rem;
-  padding: 0 16px;
-  max-width: 1200px;
-
   @media (max-width: ${styles.width.medium}px) {
     padding: 0;
-    margin-top: 0;
   }
 `
 
@@ -62,7 +61,7 @@ export const pageQuery = graphql`
           frontmatter {
             path
             author
-            date(formatString: "Do MMMM YYYY")
+            date(formatString: "YYYY-MM-DD")
             title
           }
           fields {

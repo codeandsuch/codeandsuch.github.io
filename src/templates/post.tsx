@@ -8,28 +8,26 @@ import Header from '../components/Header'
 import styles from '../styles'
 import './prism.css'
 import Share from '../components/Share';
+import PostSubText from '../components/PostSubText'
 
-const Container = styled.div`
+const Container = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 0;
+  padding: 0 2rem;
 `
 
 const PostHeader = styled.header`
   width: 100%;
-  background-color: ${styles.color.lightgrey};
-  /* clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%, 4% 50%); */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 64px 0 56px;
-  margin-top: 5rem;
-  margin-bottom: 32px;
   min-height: 20rem;
+  margin: 15rem 0 10rem;
 
-  @media (max-width: ${styles.width.medium}px) {
-    padding: 32px 0 28px;
+  @media (max-width: ${styles.width.small}px) {
+    margin: 9rem 0 2rem;
   }
 `
 
@@ -37,40 +35,18 @@ const BackButton = styled.div`
   width: 100%;
   max-width: ${styles.width.contentMax}px;
   font-size: 2em;
-  padding: 0 16px;
   margin-bottom: 2rem;
 `
 
 export const PostHeaderContents = styled.div`
   max-width: ${styles.width.contentMax}px;
   width: 100%;
-  padding: 0 16px;
   display: grid;
-  grid-row-gap: 1rem;
+  grid-row-gap: 2.5rem;
   grid-column-gap: 1.5rem;
-  grid-template-columns: min-content 1fr;
   grid-template-areas:
-    'avatar title'
-    'avatar subtext';
-  @media (max-width: ${styles.width.small}px) {
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr min-content;
-    grid-template-areas:
-      'title title'
-      'subtext avatar';
-  }
-`
-
-export const PostAvatar = styled.a`
-  grid-area: 'avatar';
-  display: flex;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: ${(props: {twitterAvatarUrl: string}) => `url(${props.twitterAvatarUrl})`};
-  width: 48;
-  height: 48;
-  background-size: cover;
-  align-self: center;
+    'title'
+    'subtext';
 `
 
 export const PostTitle = styled.h1`
@@ -79,48 +55,38 @@ export const PostTitle = styled.h1`
   font-weight: bold;
   font-size: 3.2em;
 
-  @media (max-width: ${styles.width.medium}px) {
-    font-size: 2.7em;
-  }
-`
-
-export const PostSubtext = styled.div`
-  grid-area: subtext;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  flex-wrap: wrap;
-  color: ${styles.color.grayblue};
-  font-size: 1.42rem;
-
   @media (max-width: ${styles.width.small}px) {
-    flex-direction: column;
-    align-items: flex-start;
+    font-size: 2.4em;
   }
 `
 
-export const PostSubtextEmoji = styled.span`
-  margin-right: .5rem;
+export const PostSubtextIcon = styled.span`
+  @media (min-width: ${styles.width.small}px) {
+    margin: 0 1rem;
+    :first-child {
+      margin-left: 0;
+    }
+  }
 `
 
 export const PostSubtextDot = styled.span`
-  margin: 0 12px;
+  margin: 0 1.5rem;
   opacity: 0.8;
   @media (max-width: ${styles.width.small}px) {
-    display: none;
+    margin: 0 1rem;
   }
 `
 
-const Content = styled.article`
+const Content = styled.div`
   max-width: ${styles.width.contentMax}px;
-  font-size: 1.6em;
+  font-size: 1.8em;
   line-height: 1.8em;
   color: ${styles.color.darkgrey};
-  padding: 0 16px;
+  /* padding: 0 16px; */
   width: 100%;
 
   @media (max-width: ${styles.width.medium}px) {
-    font-size: 1.8rem;
+    font-size: 1.5em;
   }
 
 
@@ -236,9 +202,7 @@ class BlogPost extends React.Component<Props> {
       frontmatter: { title, date, author, path, twitterHandle },
       html,
       excerpt,
-      fields: {
-        twitterAvatarUrl
-      }
+      fields: { twitterAvatarUrl }
     } = this.props.data.markdownRemark
 
     const textWithoutHTML = html.replace(/<[^>]*>/g, '')
@@ -246,35 +210,35 @@ class BlogPost extends React.Component<Props> {
     const twitterUrl = `https://www.twitter.com/${twitterHandle}`
 
     return (
-      <Container>
-        <Helmet title={`${title} | ${siteTitle}`}>
-          <meta name="description" content={excerpt} />
-        </Helmet>
-
+      <>
         <Header compressed/>
+        <Container>
+          <Helmet title={`${title} | ${siteTitle}`}>
+            <meta name="description" content={excerpt} />
+          </Helmet>
 
-        <PostHeader>
-          <PostHeaderContents>
-            <PostAvatar twitterAvatarUrl={twitterAvatarUrl} href={twitterUrl}></PostAvatar>
-            <PostTitle>{title}</PostTitle>
-            <PostSubtext>
-              <div><PostSubtextEmoji>📝</PostSubtextEmoji><a href={twitterUrl}>{author}</a></div>
-              <PostSubtextDot>•</PostSubtextDot>
-              <div><PostSubtextEmoji>📅</PostSubtextEmoji><span>{date}</span></div>
-              <PostSubtextDot>•</PostSubtextDot>
-              <div><PostSubtextEmoji>☕</PostSubtextEmoji><span>{readTime.text}</span></div>
-            </PostSubtext>
-          </PostHeaderContents>
-        </PostHeader>
+          <PostHeader>
+            <PostHeaderContents>
+              <PostTitle>{title}</PostTitle>
+              <PostSubText
+                twitterAvatarUrl={twitterAvatarUrl}
+                twitterUrl={twitterUrl}
+                author={author}
+                date={date}
+                readTime={readTime.text}
+              />
+            </PostHeaderContents>
+          </PostHeader>
 
-        <BackButton>
-          <Link to='/'>←</Link>
-        </BackButton>
+          <BackButton>
+            <Link to='/'>←</Link>
+          </BackButton>
 
-        <Content dangerouslySetInnerHTML={{ __html: html }} />
+          <Content dangerouslySetInnerHTML={{ __html: html }} />
 
-        <Share link={`https://codeandsuch.github.io${path}`} { ...{ title, twitterHandle } }/>
-      </Container>
+          <Share link={`https://codeandsuch.github.io${path}`} { ...{ title, twitterHandle } }/>
+        </Container>
+      </>
     )
   }
 }

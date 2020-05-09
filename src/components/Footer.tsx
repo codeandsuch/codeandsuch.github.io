@@ -7,7 +7,6 @@ const Text = styled.footer`
   text-align: center;
   margin: 12rem 0 2.5rem 0;
   font-size: 1.4em;
-  color: ${styles.color.grey};
 
   @media (max-width: ${styles.width.medium}px) {
     font-size: 1.2em;
@@ -15,7 +14,7 @@ const Text = styled.footer`
 `
 
 const Link = styled.a`
-  color: ${styles.color.green};
+  color: ${styles.color.turquoise};
 `
 
 const Footer = () => (

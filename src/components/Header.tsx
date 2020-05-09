@@ -26,7 +26,7 @@ const Container = styled(Link)`
 `
 
 const Inner = styled.header`
-  max-width: 900px;
+  max-width: ${styles.width.contentMax}px;
   width: 100%;
   height: 100%;
 `
@@ -46,8 +46,8 @@ const Contents = styled.div`
 `
 
 const Title = styled.h1`
+  font-size: ${(p: Props) => (p.compressed ? '2.3rem' : '4.5rem')};
   font-weight: 400;
-  font-size: ${(p: Props) => (p.compressed ? '2.3rem' : '5.5rem')};
   line-height: ${(p: Props) => (p.compressed ? '2.5rem' : '3rem')};
   letter-spacing: ${(p: Props) => (p.compressed ? '1.1px' : '0.7px')};
   transition: font-size 1s ease;
@@ -58,20 +58,20 @@ const Title = styled.h1`
 `
 
 const Highlight = styled.span`
+  font-size: 0.8em;
   color: ${styles.color.lightblue};
-  font-size: 0.85em;
   margin: ${(p: Props) =>
     p.compressed ? '0 .35rem 0 .3rem' : '0 .6rem 0 .5rem'};
 `
 
 const Subtext = styled.h4`
+  font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.35rem')};
   color: ${styles.color.grayblue};
-  font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.5rem')};
   line-height: 1.6;
   display: flex;
   font-weight: normal;
   transition: font-size 0.5s ease;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   @media (max-width: ${styles.width.medium}px) {
     font-size: ${(p: Props) => (p.compressed ? '1.05rem' : '1.2rem')};

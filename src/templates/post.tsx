@@ -19,15 +19,17 @@ const Container = styled.article`
 `
 
 const PostHeader = styled.header`
+  max-width: ${styles.width.contentMax}px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 20rem;
-  margin: 15rem 0 10rem;
+  margin: 19rem 0 6rem;
+
+  > *:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
 
   @media (max-width: ${styles.width.small}px) {
-    margin: 9rem 0 2rem;
+    margin-bottom: 0;
   }
 `
 
@@ -36,17 +38,6 @@ const BackButton = styled.div`
   max-width: ${styles.width.contentMax}px;
   font-size: 2em;
   margin-bottom: 2rem;
-`
-
-export const PostHeaderContents = styled.div`
-  max-width: ${styles.width.contentMax}px;
-  width: 100%;
-  display: grid;
-  grid-row-gap: 2.5rem;
-  grid-column-gap: 1.5rem;
-  grid-template-areas:
-    'title'
-    'subtext';
 `
 
 export const PostTitle = styled.h1`
@@ -79,10 +70,9 @@ export const PostSubtextDot = styled.span`
 
 const Content = styled.div`
   max-width: ${styles.width.contentMax}px;
-  font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 1.8em;
   color: ${styles.color.darkgrey};
-  /* padding: 0 16px; */
   width: 100%;
 
   @media (max-width: ${styles.width.medium}px) {
@@ -202,7 +192,6 @@ class BlogPost extends React.Component<Props> {
       frontmatter: { title, date, author, path, twitterHandle },
       html,
       excerpt,
-      fields: { twitterAvatarUrl }
     } = this.props.data.markdownRemark
 
     const textWithoutHTML = html.replace(/<[^>]*>/g, '')
@@ -218,16 +207,13 @@ class BlogPost extends React.Component<Props> {
           </Helmet>
 
           <PostHeader>
-            <PostHeaderContents>
-              <PostTitle>{title}</PostTitle>
-              <PostSubText
-                twitterAvatarUrl={twitterAvatarUrl}
-                twitterUrl={twitterUrl}
-                author={author}
-                date={date}
-                readTime={readTime.text}
-              />
-            </PostHeaderContents>
+            <PostTitle>{title}</PostTitle>
+            <PostSubText
+              twitterUrl={twitterUrl}
+              author={author}
+              date={date}
+              readTime={readTime.text}
+            />
           </PostHeader>
 
           <BackButton>
@@ -263,9 +249,6 @@ export const pageQuery = graphql`
         date(formatString: "Do MMMM YYYY")
         path
         twitterHandle
-      }
-      fields {
-        twitterAvatarUrl
       }
     }
   }

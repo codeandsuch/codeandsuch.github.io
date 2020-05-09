@@ -7,7 +7,7 @@ import styles from '../styles'
 import 'typeface-montserrat';
 
 const Container = styled.main`
-  max-width: 900px;
+  max-width: ${styles.width.contentMax}px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -63,9 +63,6 @@ export const pageQuery = graphql`
             author
             date(formatString: "YYYY-MM-DD")
             title
-          }
-          fields {
-            twitterAvatarUrl
           }
           excerpt(pruneLength: 235)
           html

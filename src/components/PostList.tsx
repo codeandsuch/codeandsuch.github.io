@@ -4,14 +4,14 @@ import styled from 'styled-components'
 import readingTime from 'reading-time'
 
 import styles from '../styles'
-import { PostHeaderContents, PostTitle } from '../templates/post';
+import { PostTitle } from '../templates/post';
 import PostSubText from './PostSubText'
 
 const Container = styled.div`
   margin: 0 -2rem;
 `
 
-const Post = styled.div`
+const Post = styled.article`
   padding: 2rem;
 
   :not(:last-child) {
@@ -25,21 +25,15 @@ const Post = styled.div`
 
 const PostLink = styled(Link)`
   display: block;
-  /* padding: 24px 0; */
-`
 
-const PostListHeaderContents = styled(PostHeaderContents)`
-  grid-row-gap: .6rem;
-  grid-column-gap: 1.5rem;
-  grid-template-areas:
-    'title'
-    'subtext'
-    'excerpt';
+  > *:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
 `
 
 const PostListTitle = styled(PostTitle)`
-  font-size: 2.1em;
-  line-height: 3.4rem;
+  font-size: 2em;
+  line-height: 3rem;
 
   @media (max-width: ${styles.width.medium}px) {
     font-size: 1.8em;
@@ -48,14 +42,12 @@ const PostListTitle = styled(PostTitle)`
 `
 
 const Excerpt = styled.p`
-  margin-top: 1rem;
-  grid-area: excerpt;
   font-size: 1.5rem;
+  grid-area: excerpt;
   line-height: 2.5rem;
   opacity: .8;
 
   @media (max-width: ${styles.width.medium}px) {
-    margin-top: .2rem;
     font-size: 1.4rem;
   }
 `
@@ -69,7 +61,6 @@ const PostList: React.SFC<Props> = ({ posts }) => (
     {posts.map(post => {
       const {
         frontmatter: { title, path, author, date },
-        fields: { twitterAvatarUrl }
       } = post.node
 
       const textWithoutHTML = post.node.html.replace(/<[^>]*>/g, '')
@@ -78,16 +69,13 @@ const PostList: React.SFC<Props> = ({ posts }) => (
       return (
         <Post key={path}>
           <PostLink to={path}>
-            <PostListHeaderContents>
-              <PostListTitle>{title}</PostListTitle>
-              <PostSubText
-                twitterAvatarUrl={twitterAvatarUrl}
-                author={author}
-                date={date}
-                readTime={readTime.text}
-              />
-              <Excerpt>{post.node.excerpt}</Excerpt>
-            </PostListHeaderContents>
+            <PostListTitle>{title}</PostListTitle>
+            <PostSubText
+              author={author}
+              date={date}
+              readTime={readTime.text}
+            />
+            <Excerpt>{post.node.excerpt}</Excerpt>
           </PostLink>
         </Post>
       )

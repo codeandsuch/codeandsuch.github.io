@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     min-height: 100%;
+    color: hsla(0,0%,0%,0.9);
   }
 
   * {

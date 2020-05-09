@@ -21,7 +21,6 @@ const Content = styled.div`
 const Divider = styled.div`
   user-select: none;
   width: 100%;
-  font-size: 15px;
   margin: 10rem 0 6rem 0;
   line-height: 0px;
   letter-spacing: 20px;

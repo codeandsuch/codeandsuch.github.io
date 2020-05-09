@@ -1,7 +1,7 @@
 const styles = {
   width: {
     max: 1200,
-    contentMax: 900,
+    contentMax: 700,
     medium: 800,
     small: 550,
   },

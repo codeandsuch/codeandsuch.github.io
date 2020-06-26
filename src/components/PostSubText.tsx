@@ -9,13 +9,23 @@ export const StyledPostSubText = styled.small`
   display: block;
 
   >:not(:last-child) {
-    margin-right: 2.5rem;
+    /* margin-right: 2.5rem; */
 
     @media (max-width: ${styles.width.small}px) {
-      margin-right: 1.5rem;
+      /* margin-right: 1.5rem; */
     }
   }
 `
+
+const Separator = styled.span`
+  margin: 0 0.8rem;
+  font-weight: bold;
+`;
+
+const Icon = styled.span`
+  margin-right: 1rem;
+`;
+
 
 interface Props {
   twitterUrl?: string;
@@ -26,7 +36,11 @@ interface Props {
 
 const PostSubText: React.SFC<Props> = ({ author, twitterUrl, date, readTime }) => (
   <StyledPostSubText>
-    <a href={twitterUrl}>{author}</a>    •   📅 {date}   •   ☕ {readTime}
+    <a href={twitterUrl}>{author}</a>
+    <Separator>•</Separator>
+    {date}
+    <Separator>•</Separator>
+    <Icon>☕</Icon>{readTime}
   </StyledPostSubText>
 )
 

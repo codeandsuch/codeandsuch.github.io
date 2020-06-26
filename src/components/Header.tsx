@@ -21,7 +21,7 @@ const Container = styled(Link)`
   padding: ${(p: any) => (p.to.state.compressed ? '0 2rem' : '0')};
 
   @media (max-width: ${styles.width.medium}px) {
-    height: ${(p: any) => (p.to.state.compressed ? '5rem' : '50vh')};
+    height: ${(p: any) => (p.to.state.compressed ? '5rem' : '40vh')};
   }
 `
 

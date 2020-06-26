@@ -5,7 +5,7 @@ import styles from '../styles'
 
 const Text = styled.footer`
   text-align: center;
-  margin: 12rem 0 2.5rem 0;
+  margin: 8rem 0 2.5rem 0;
   font-size: 1.4em;
 
   @media (max-width: ${styles.width.medium}px) {

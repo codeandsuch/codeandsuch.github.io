@@ -36,7 +36,7 @@ const PostListTitle = styled(PostTitle)`
   line-height: 3rem;
 
   @media (max-width: ${styles.width.medium}px) {
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: 3rem;
   }
 `

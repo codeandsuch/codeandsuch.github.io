@@ -30,6 +30,7 @@ const PostHeader = styled.header`
 
   @media (max-width: ${styles.width.small}px) {
     margin-bottom: 0;
+    margin-top: 14rem;
   }
 `
 
@@ -47,7 +48,7 @@ export const PostTitle = styled.h1`
   font-size: 3.2em;
 
   @media (max-width: ${styles.width.small}px) {
-    font-size: 2.4em;
+    font-size: 2.8em;
   }
 `
 

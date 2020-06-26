@@ -1,5 +1,5 @@
 ---
-title: "Conditionally adding entries to array and object literals in Javascript"
+title: "Conditionally adding entries to array and object literals in JavaScript"
 author: "Kalle Bornemark"
 date: "2018-08-31"
 path: "/conditional-array-object-literals"
@@ -8,7 +8,7 @@ twitterHandle: "@kallebornemark"
 
 ## The problem
 
-A common way to define an array in Javascript is to use an array literal.
+A common way to define an array in JavaScript is to use an array literal.
 
 ```js
 const picnicBasket = [
